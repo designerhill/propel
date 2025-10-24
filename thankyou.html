@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #4097cf, #041e77);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            color: #fff;
+        }
+
+        .logo {
+            width: 600px;
+            height: 400px;
+            margin: 0 auto 20px;
+            background: url('assets/images/loader.gif') no-repeat center/cover;
+            border-radius: 10%;             
+        }
+
+        .message {
+            font-size: 2rem;
+            font-weight: bold;
+            animation: fadeIn 3s ease-in-out;
+			margin-top: 0px;
+        }
+
+        .subtext {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            animation: fadeIn 4s ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) scale(0.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo"></div>
+        <div class="message">Thank You for Connecting With Us!</div>
+        <div class="subtext">We will get back to you soon.</div>
+    </div>
+    <div class="particles"></div>
+
+     
+</body>
+</html>

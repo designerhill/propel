@@ -1,0 +1,196 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Headings use Space Mono */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Mono', monospace;
+  }
+  
+  /* Navigation Bar */
+  .navbar-light {
+    background-color: #f8f9fa;
+  }
+  .navbar-brand {
+    font-weight: 700;
+  }
+
+  .navbar-brand img{
+    height:50px;
+  }
+  
+  /* Banner Section */
+  .banner {
+    position: relative;
+    height: 80vh;
+    background: url('img/3.jpg') center center/cover no-repeat;
+  }
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+
+  .btn-primary {
+    background-color: #cba562;
+    border-color: #cba562;
+  }
+  
+  /* About Us Section */
+  #about h2 {
+    margin-bottom: 0.5rem;
+  }
+  #about h5 {
+    margin-bottom: 1rem;
+  }
+
+  .rounded {
+    border-radius: 25%;
+    height: 360px;
+    width: 500px;
+}
+
+
+ .faq{
+    background-color: #fbf0dd;
+ }
+  
+  /* Our Amenities Section */
+  .amenities-grid {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .amenity {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    min-width: 250px;
+  }
+
+  /* Amenity Icons */
+.amenity-icon {
+    font-size: 2rem;
+    color: #007bff; /* Use your desired accent color */
+  }
+  
+  
+  /* Gallery Section */
+  .carousel-item img {
+    border-radius: 8px;
+  }
+
+  /* Gallery Section */
+.gallery-item {
+    cursor: pointer;
+    border-radius: 30px;
+    transition: transform 0.3s;
+    padding: 15px;
+  }
+  .gallery-item:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Inquiry & Map Section */
+  .inquiry-form {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+  }
+  .map-placeholder {
+    background-color: #ddd;
+    height: 100%;
+    min-height: 300px;
+    border-radius: 8px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #343a40;
+  }
+
+  /* Floating Contacts - Desktop: vertical on right; Mobile: along bottom */
+.floating-contacts {
+  position: fixed;
+  right: 20px;
+  top: 40%;
+  transform: translateY(-40%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999; /* Ensure it appears above other elements */
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  background-color: #c19953;
+  color: #fcfbfb;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-btn i {
+  margin-right: 8px;
+  font-size: 1.3rem;
+}
+
+.contact-btn span {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Hover/Focus Effects */
+.contact-btn:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+ 
+/* Responsive for Mobile: place bar at bottom */
+@media (max-width: 768px) {
+  .floating-contacts {
+    top: auto;
+    right: 0;
+    bottom: 0;
+    transform: none;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    border-radius: 0;
+    background-color: #fff; /* Optional: a background for the bottom bar */
+    padding: 10px 0;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.25);
+  }
+  .contact-btn {
+    flex: 1;
+    justify-content: center;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+  .contact-btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .contact-btn i {
+    margin-right: 6px;
+  }
+  
+}
+
+  

@@ -1,0 +1,6 @@
+[29-Oct-2024 13:16:51 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/uvm8dsjiee6t/public_html/sitemanager/agent/config.php on line 3
+[29-Oct-2024 13:16:51 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/uvm8dsjiee6t/public_html/sitemanager/agent/config.php on line 3
+[29-Oct-2024 13:16:51 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on bool in /home/uvm8dsjiee6t/public_html/sitemanager/agent/dashboard.php:85
+Stack trace:
+#0 {main}
+  thrown in /home/uvm8dsjiee6t/public_html/sitemanager/agent/dashboard.php on line 85

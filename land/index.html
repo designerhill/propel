@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Capdeal Land Projects Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    .listings {
+      width: 40%;
+      padding: 20px;
+      overflow-y: auto;
+      background: #f9f9f9;
+      border-right: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+    }
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .tab {
+      padding: 8px 16px;
+      background: #007bff;
+      color: #fff;
+      border-radius: 4px;
+      font-size: 14px;
+      border: none;
+      cursor: default;
+    }
+    #project-list {
+      flex-grow: 1;
+    }
+    .project {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      background: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .project-content {
+      flex: 1;
+      padding-right: 10px;
+    }
+    .project img {
+      width: 100px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .view-more {
+      padding: 12px;
+      margin-top: 10px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    #map {
+      width: 60%;
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .listings, #map {
+        width: 100%;
+        height: 50vh;
+      }
+    }
+    .pin-wrapper {
+      position: relative;
+      width: 30px;
+      height: 40px;
+    }
+    .pin-pulse {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 0, 0, 0.4);
+      border-radius: 50%;
+      animation: pulse 1.5s ease-out infinite;
+      z-index: 1;
+    }
+    .pin-icon {
+      position: relative;
+      z-index: 2;
+      width: 30px;
+      height: 40px;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      70% { transform: scale(2); opacity: 0; }
+      100% { transform: scale(2); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="listings">
+    <div class="tabs">
+      <div class="tab">Land Projects</div>
+    </div>
+    <div id="project-list"></div>
+    <button class="view-more" onclick="loadMoreProjects()">View More</button>
+  </div>
+  <div id="map"></div>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  const allProjects = [
+    {
+      id: 1,
+      name: "Jharpada Plot",
+      location: "Jharpada",
+      lat: 20.2800846,
+      lng: 85.8681717,
+      url: "https://propel.plus/property-in-bhubaneswar-location/jharpada/",
+      image: "images/jharpada.jpg"
+    },
+    {
+      id: 2,
+      name: "Kesora Road Plot",
+      location: "Kesora Road",
+      lat: 20.2630329,
+      lng: 85.8769684,
+      url: "https://www.google.com/maps/place/20.2630329,85.8769684",
+      image: "images/kesora-road.jpg"
+    },
+    {
+      id: 3,
+      name: "Patia Plot",
+      location: "Patia",
+      lat: 20.3722512,
+      lng: 85.8046733,
+      url: "https://www.google.com/maps?q=20.3722512,85.8046733",
+      image: "images/patia-plot.jpg"
+    },
+    {
+      id: 6,
+      name: "Balianta Plot 1",
+      location: "Balianta",
+      lat: 20.34708023071289,
+      lng: 85.90716552734375,
+      url: "https://www.google.com/maps?q=20.34708023071289,85.90716552734375",
+      image: "images/balianta-plot-1.jpg"
+    },
+    {
+      id: 7,
+      name: "Balianta Plot 2",
+      location: "Balianta",
+      lat: 20.343902587890625,
+      lng: 85.91101837158203,
+      url: "https://www.google.com/maps?q=20.343902587890625,85.91101837158203",
+      image: "images/balianta-plot-2.jpg"
+    },
+    {
+      id: 8,
+      name: "Balianta Plot 3",
+      location: "Balianta",
+      lat: 20.34002685546875,
+      lng: 85.91858673095703,
+      url: "https://www.google.com/maps?q=20.34002685546875,85.91858673095703",
+      image: "images/balianta-plot-3.jpg"
+    },
+    {
+      id: 9,
+      name: "Balianta 4",
+      location: "Balianta",
+      lat: 20.336061477661133,
+      lng: 85.90270233154297,
+      url: "https://www.google.com/maps?q=20.336061477661133,85.90270233154297",
+      image: "images/balianta-plot-4.jpg"
+    },
+    {
+      id: 10,
+      name: "Balianta 5",
+      location: "Balianta",
+      lat: 20.330528259277344,
+      lng: 85.92668914794922,
+      url: "https://www.google.com/maps?q=20.330528259277344,85.92668914794922",
+      image: "images/balianta-plot-5.jpg"
+    },
+    {
+      id: 11,
+      name: "Balianta 6",
+      location: "Balianta",
+      lat: 20.342119216918945,
+      lng: 85.90141296386719,
+      url: "https://www.google.com/maps?q=20.342119216918945,85.90141296386719",
+      image: "images/balianta-plot-6.jpg"
+    }
+  ];
+
+  let mapMarkers = [];
+  const projectList = document.getElementById("project-list");
+  const map = L.map('map').setView([20.2959847, 85.8246101], 13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
+
+  function createBlinkingPinIcon() {
+    return L.divIcon({
+      className: '',
+      html: `<div class="pin-wrapper"><div class="pin-pulse"></div><img class="pin-icon" src="https://cdn-icons-png.flaticon.com/512/2776/2776067.png" alt="Pin"/></div>`,
+      iconSize: [30, 40],
+      iconAnchor: [15, 40],
+      popupAnchor: [0, -35]
+    });
+  }
+
+  function renderProjects(projects) {
+    projectList.innerHTML = "";
+    mapMarkers.forEach(marker => map.removeLayer(marker));
+    mapMarkers = [];
+
+    projects.forEach(project => {
+      const div = document.createElement("div");
+      div.className = "project";
+      div.innerHTML = `<div class="project-content"><h3>${project.name}</h3><p><strong>Location:</strong> ${project.location}</p><button class="view-btn" onclick="event.stopPropagation(); window.location.href='${project.url}'">View More</button></div><img src="${project.image}" alt="${project.name}" />`;
+      projectList.appendChild(div);
+
+      const marker = L.marker([project.lat, project.lng], {
+        icon: createBlinkingPinIcon()
+      }).addTo(map).bindPopup(`<strong>${project.name}</strong><br>${project.location}`);
+      mapMarkers.push(marker);
+
+      div.addEventListener("click", () => {
+        map.setView([project.lat, project.lng], 15);
+        marker.openPopup();
+      });
+    });
+  }
+
+  function loadMoreProjects() {
+    // Future pagination logic placeholder
+  }
+
+  renderProjects(allProjects);
+</script>
+</body>
+</html>

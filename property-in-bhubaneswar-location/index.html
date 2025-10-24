@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Capdeal Projects Map with Tabs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    .listings {
+      width: 40%;
+      padding: 20px;
+      overflow-y: auto;
+      background: #f9f9f9;
+      border-right: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+    }
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+    .tab {
+      padding: 8px 16px;
+      background: #e0e0e0;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      border: none;
+    }
+    .tab.active {
+      background: #007bff;
+      color: #fff;
+    }
+    #project-list {
+      flex-grow: 1;
+    }
+    .project {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      background: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .project-content {
+      flex: 1;
+      padding-right: 10px;
+    }
+    .project img {
+      width: 100px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .view-more {
+      padding: 12px;
+      margin-top: 10px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    #map {
+      width: 60%;
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .listings, #map {
+        width: 100%;
+        height: 50vh;
+      }
+    }
+    .pin-wrapper {
+      position: relative;
+      width: 30px;
+      height: 40px;
+    }
+    .pin-pulse {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 0, 0, 0.4);
+      border-radius: 50%;
+      animation: pulse 1.5s ease-out infinite;
+      z-index: 1;
+    }
+    .pin-icon {
+      position: relative;
+      z-index: 2;
+      width: 30px;
+      height: 40px;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      70% { transform: scale(2); opacity: 0; }
+      100% { transform: scale(2); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="listings">
+    <div class="tabs">
+      <button class="tab active" onclick="filterProjects('all', this)">All</button>
+      <button class="tab" onclick="filterProjects('resale', this)">Resale</button>
+      <button class="tab" onclick="filterProjects('land', this)">Land</button>
+      <button class="tab" onclick="filterProjects('commercial', this)">Commercial</button>
+      <button class="tab" onclick="filterProjects('rent', this)">Rent</button>
+    </div>
+    <div id="project-list"></div>
+    <button class="view-more" onclick="loadMoreProjects()">View More</button>
+  </div>
+  <div id="map"></div>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  const allProjects = [
+    {
+      id: 1,
+      name: "Jharpada Plot",
+      location: "Jharpada",
+      price: "₹4,000/sqft",
+      type: "land",
+      lat: 20.2800846,
+      lng: 85.8681717,
+      url: "https://propel.plus/property-in-bhubaneswar-location/jharpada/",
+      image: "images/jharpada.jpg"
+    },
+    {
+      id: 2,
+      name: "Kesora Road Plot",
+      location: "Kesora Road",
+      price: "Plot Available",
+      type: "land",
+      lat: 20.2630329,
+      lng: 85.8769684,
+      url: "https://www.google.com/maps/place/20.2630329,85.8769684",
+      image: "images/kesora-road.jpg"
+    },
+    {
+      id: 3,
+      name: "Patia Plot",
+      location: "Patia",
+      price: "₹3,300/sqft",
+      type: "land",
+      lat: 20.3722512,
+      lng: 85.8046733,
+      url: "https://www.google.com/maps?q=20.3722512,85.8046733",
+      image: "images/patia-plot.jpg"
+    },
+    {
+      id: 4,
+      name: "Aryalaya Apartment",
+      location: "Nilakanth Nagar, Nayapali",
+      price: "3BHK, 1560 sqft, ₹1.80 Cr",
+      type: "resale",
+      lat: 20.28066,
+      lng: 85.8198,
+      url: "https://www.google.com/maps/place/7RHC%2BJ8R+Aryalaya+Apartment",
+      image: "images/aryalaya-apartment.jpg"
+    },
+    {
+      id: 5,
+      name: "Cosmopolis Commercial Complex",
+      location: "2nd Floor, North Facing",
+      price: "248 sqft - ₹27 Lakhs (Negotiable)",
+      type: "commercial",
+      lat: 20.2502446,
+      lng: 85.7884336,
+      url: "https://www.google.com/maps/place/20.250245,85.788434",
+      image: "images/cosmopolis-commercial.jpg"
+    }
+  ];
+
+  let mapMarkers = [];
+  const projectList = document.getElementById("project-list");
+  const map = L.map('map').setView([20.2959847, 85.8246101], 13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
+
+  function createBlinkingPinIcon() {
+    return L.divIcon({
+      className: '',
+      html: `<div class="pin-wrapper"><div class="pin-pulse"></div><img class="pin-icon" src="https://cdn-icons-png.flaticon.com/512/2776/2776067.png" alt="Pin"/></div>`,
+      iconSize: [30, 40],
+      iconAnchor: [15, 40],
+      popupAnchor: [0, -35]
+    });
+  }
+
+  function renderProjects(projects) {
+    projectList.innerHTML = "";
+    mapMarkers.forEach(marker => map.removeLayer(marker));
+    mapMarkers = [];
+
+    projects.forEach(project => {
+      const div = document.createElement("div");
+      div.className = "project";
+      div.innerHTML = `<div class="project-content"><h3>${project.name}</h3><p><strong>Location:</strong> ${project.location}</p><p><strong>Price:</strong> ${project.price}</p><button class="view-btn" onclick="event.stopPropagation(); window.location.href='${project.url}'">View More</button></div><img src="${project.image}" alt="${project.name}" />`;
+      projectList.appendChild(div);
+
+      const marker = L.marker([project.lat, project.lng], {
+        icon: createBlinkingPinIcon()
+      }).addTo(map).bindPopup(`<strong>${project.name}</strong><br>${project.location}<br>${project.price}`);
+      mapMarkers.push(marker);
+
+      div.addEventListener("click", () => {
+        map.setView([project.lat, project.lng], 15);
+        marker.openPopup();
+      });
+    });
+  }
+
+  function filterProjects(type, button) {
+    document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+    button.classList.add('active');
+    const filtered = (type === "all") ? allProjects : allProjects.filter(p => p.type === type);
+    renderProjects(filtered);
+  }
+
+  function loadMoreProjects() {
+    // Add pagination logic if needed
+  }
+
+  renderProjects(allProjects);
+</script>
+</body>
+</html>
