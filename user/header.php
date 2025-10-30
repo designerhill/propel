@@ -424,25 +424,6 @@ if (!isset($_SESSION['user'])) {
                 </div>
             </div>
 
-            <!--sticky Header-->
-            <div class="sticky-header">
-                <div class="outer-box">
-                    <div class="main-box">
-                        <div class="logo-box">
-                            <figure class="logo"><a href="../index.php"><img src="../assets/images/logo.png" alt=""></a>
-                            </figure>
-                        </div>
-                        <div class="menu-area clearfix">
-                            <nav class="main-menu clearfix">
-                                <!--Keep This Empty / Menu will come through Javascript-->
-                            </nav>
-                        </div>
-                        <div class="sign-box">
-                            <a href="../logout.php"><i class="fa fa-sign-out"></i> &nbsp;Logout</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </header>
 
         <?php

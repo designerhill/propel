@@ -54,9 +54,8 @@
 		
 		$('.mobile-menu .menu-box').mCustomScrollbar();
 		
-		var mobileMenuContent = $('.main-header .menu-area .main-menu').html();
-		$('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent);
-		$('.sticky-header .main-menu').append(mobileMenuContent);
+	var mobileMenuContent = $('.main-header .menu-area .main-menu').html();
+	$('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent);
 		
 		//Dropdown Button
 		$('.mobile-menu li.dropdown .dropdown-btn').on('click', function() {

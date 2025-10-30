@@ -1,0 +1,154 @@
+/* Custom styles for Propel homepage redesign */
+
+.search-field-section {
+    margin-top: -60px;
+    position: relative;
+    z-index: 10;
+}
+.search-field-section .inner-container {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 12px 48px rgba(0,0,0,0.10);
+    padding: 32px 40px;
+    border: 1px solid #eef0f2;
+}
+.search-field-section .tab-btns {
+    border: none;
+    gap: 18px;
+}
+.search-field-section .tab-btn {
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    color: #888;
+    border-radius: 10px;
+    padding: 14px 38px;
+    font-weight: 700;
+    font-size: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition: all 0.2s;
+}
+.search-field-section .tab-btn.active-btn {
+    border: 2px solid #bc883f;
+    color: #bc883f;
+    box-shadow: 0 2px 8px rgba(255,90,95,0.08);
+}
+.search-field-section .form-group {
+    margin-bottom: 0;
+}
+.search-field-section label {
+    font-size: 13px;
+    color: #6b7280; /* slate-500 */
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.search-field-section .field-input {
+    position: relative;
+}
+.search-field-section .field-input i {
+    color: #bc883f;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.search-field-section input[type="search"] {
+    border: 1.5px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 12px 16px 12px 46px;
+    font-size: 15px;
+    width: 100%;
+}
+.search-field-section input[type="search"]:focus {
+    outline: none;
+    border-color: #bc883f;
+    box-shadow: 0 0 0 3px rgba(255,90,95,0.12);
+}
+.search-field-section .select-box {
+    position: relative;
+}
+.search-field-section .select-box i {
+    color: #bc883f;
+    position: absolute;
+    left: 16px;
+    top: 17px;
+    z-index: 9;
+    /* transform: translateY(-50%); */
+}
+.search-field-section select.wide {
+    border: 1.5px solid #e5e7eb;
+    border-radius: 12px;
+    padding-left: 44px;
+    font-size: 15px;
+    width: 100%;
+    height: 48px;
+}
+.search-field-section select.wide:focus {
+    outline: none;
+    border-color: #bc883f;
+    box-shadow: 0 0 0 3px rgba(255,90,95,0.12);
+}
+.search-field-section .select-box .nice-select {
+    border: 1.5px solid #e5e7eb;
+    border-radius: 12px;
+    padding-left: 44px;
+    height: 48px;
+    line-height: 46px;
+    width: 100%;
+}
+.search-field-section .select-box .nice-select:focus,
+.search-field-section .select-box .nice-select.open,
+.search-field-section .select-box .nice-select:hover {
+    border-color: #bc883f;
+    box-shadow: 0 0 0 3px rgba(255,90,95,0.12);
+}
+.search-field-section button[type="submit"] {
+    background: #bc883f;
+    border: none;
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px 0;
+    width: 100%;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 2px 8px rgba(255,90,95,0.10);
+}
+.search-field-section button[type="submit"]:hover {
+    background: #bc883f;
+    box-shadow: 0 4px 16px rgba(255,90,95,0.18);
+}
+
+/* Helpers for search mode toggle */
+.search-field-section .is-hidden {
+    display: none !important;
+}
+
+/* Optional: adjust spacing for the new mode select */
+.search-field-section #search-mode.wide {
+    height: 48px;
+}
+
+/* Hide any Nice Select wrappers accidentally created for template selects */
+.search-field-section .template-select + .nice-select {
+    display: none !important;
+}
+
+/* Layout tweaks and responsiveness */
+.search-field-section .row.align-items-end {
+    row-gap: 16px;
+}
+
+@media (max-width: 991.98px) {
+    .search-field-section .inner-container {
+        padding: 24px;
+        border-radius: 14px;
+    }
+    .search-field-section button[type="submit"] {
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .search-field-section .inner-container {
+        padding: 18px;
+    }
+}
