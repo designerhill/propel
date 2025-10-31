@@ -184,407 +184,279 @@
              
      }
      ?>
-<style>
-.note-editable {
-    background-color: #f5f5f5 !important;
-    /* Set your desired background color */
-}
-</style>
 
 <section class="myprofile-section sec-pad">
     <div class="container">
-        <!-- Sidebar -->
-
         <div class="main-content">
+            <!-- Navigation Tabs -->
             <div class="tabs">
                 <a href="profile.php" class="tab">Profile</a>
                 <a href="my-listing.php" class="tab active">My Listings</a>
-
                 <a href="communication.php" class="tab">Communication</a>
-
-
             </div>
-            <div class="col-xl-12 col-lg-12 ">
-                <form method="post" action="" enctype="multipart/form-data">
-                    <div class="card-body">
-                        <h4 class="card-title">Property Detail</h4>
-                        <?php echo $error; ?>
-                        <?php echo $msg; ?>
 
-                        <div class="row">
+            <!-- Add Property Form -->
+            <div class="profile-details">
+                <div class="cards">
+                    <button class="tab active">
+                        <i data-feather="plus-circle"></i>
+                        Add New Property
+                    </button>
+                </div>
 
-                            <div class="col-xl-12">
-                                <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label">Title <span
-                                            style="color:red;">*</span></label>
-                                    <div class="col-lg-12">
-                                        <input type="text" class="form-control txtbox" name="title" required
-                                            placeholder="Enter Title">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label">Project Name <span
-                                            style="color:red;">*</span></label>
-                                    <div class="col-lg-12">
-                                        <input type="text" class="form-control txtbox" name="project" required
-                                            placeholder="Enter Project Name">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label">Description<span
-                                            style="color:red;">*</span></label>
-                                    <div class="col-lg-12">
-                                        <textarea class="form-control txtbox" name="content" rows="6" id="summernote"
-                                            cols="30" required></textarea>
-                                    </div>
+                <div class="property-form-container">
+                    <?php echo $error; ?>
+                    <?php echo $msg; ?>
+
+                    <form method="post" action="" enctype="multipart/form-data" class="property-form">
+                        <!-- Property Detail Section -->
+                        <div class="form-section">
+                            <h4 class="section-title">
+                                <i data-feather="file-text"></i> Property Detail
+                            </h4>
+
+                            <div class="form-row-group">
+                                <div class="form-group-full">
+                                    <label class="form-label">Title <span class="required">*</span></label>
+                                    <input type="text" class="form-control" name="title" required placeholder="Enter Property Title">
                                 </div>
 
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Property Type <span
-                                            style="color:red;">*</span></label>
-                                    <div class="col-lg-8">
-                                        <select class="form-control" name="ptype" required>
-                                            <option value="">Select</option>
-                                            <?php
-																		$query1=mysqli_query($con,"select * from category");
-																		while($row1=mysqli_fetch_row($query1))
-																			{
-																	?>
-                                            <option value="<?php echo $row1['1']; ?>" class="text-captalize">
-                                                <?php echo $row1['1']; ?></option>
-                                            <?php } ?>
-                                        </select>
-                                    </div>
+                                <div class="form-group-full">
+                                    <label class="form-label">Project Name <span class="required">*</span></label>
+                                    <input type="text" class="form-control" name="project" required placeholder="Enter Project Name">
                                 </div>
 
-
-
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Selling Type <span
-                                            style="color:red;">*</span></label>
-                                    <div class="col-lg-8">
-                                        <select class="form-control" required name="stype">
-                                            <option value="">Select</option>
-                                            <option value="Rent">Rent</option>
-                                            <option value="Buy">Buy</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-
-
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Building Type <span
-                                            style="color:red;">*</span></label>
-                                    <div class="col-lg-8">
-                                        <select class="form-control" required name="buildingtype">
-                                            <option value="">Select</option>
-                                            <option value="Residential">Residential</option>
-                                            <option value="Commercial">Commercial</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">RERA Number</label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control txtbox" name="reranumber"
-                                            placeholder="Enter RERA Number">
-
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Age of Property <span
-                                            style="color:red;">*</span></label>
-                                    <div class="col-lg-8">
-                                        <select class="form-control" required name="ageofproperty">
-                                            <option value="">Select</option>
-                                            <option value="0-1">0-1</option>
-                                            <option value="1-2">1-2</option>
-                                            <option value="2-5">2-5</option>
-                                            <option value="5-10">5-10</option>
-                                            <option value="10+">10+</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Facing <span
-                                            style="color:red;">*</span></label>
-                                    <div class="col-lg-8">
-                                        <select class="form-control" required name="facing">
-                                            <option value="">Select</option>
-                                            <option value="South">South</option>
-                                            <option value="East">East</option>
-                                            <option value="North">North</option>
-                                            <option value="West">West</option>
-                                            <option value="Northwest">Northwest</option>
-                                            <option value="Southwest">Southwest</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">View</label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control txtbox" name="view"
-                                            placeholder="Enter View">
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-                        <h4 class="card-title">Price</h4>
-                        <div class="row">
-                            <div class="col-xl-6">
-
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Unit Price <span
-                                            style="color:red;">*</span></label>
-                                    <div class="col-lg-8">
-                                        <input type="number" min="1" max="9999999999" class="form-control txtbox"
-                                            name="price" required placeholder="Enter Price">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Maintenance</label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control txtbox" name="maintenance"
-                                            placeholder="Enter Maintenance">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Annual Dues Payable</label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control txtbox" name="annualduespayable"
-                                            placeholder="Enter Annual Dues Payable">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Per Sq. Feet Price</label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control txtbox" name="sqftprice"
-                                            placeholder="Enter Per Sq. Feet Price">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Booking Amount</label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control txtbox" name="bookingamount"
-                                            placeholder="Enter Booking Amount">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Membership Charges</label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control txtbox" name="membershipcharges"
-                                            placeholder="Enter Membership Charges">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="card-title">Location</h4>
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">City <span
-                                            style="color:red;">*</span></label>
-                                    <div class="col-lg-8">
-                                        <select class="form-control" name="city" required>
-                                            <option value="">Select</option>
-                                            <?php
-																		$query1=mysqli_query($con,"select * from city");
-																		while($row1=mysqli_fetch_row($query1))
-																			{
-																	?>
-                                            <option value="<?php echo $row1['1']; ?>" class="text-captalize">
-                                                <?php echo $row1['1']; ?></option>
-                                            <?php } ?>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Address <span
-                                            style="color:red;">*</span></label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control txtbox" name="address" required
-                                            placeholder="Enter Address">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Sub Locality</label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control txtbox" name="sublocation"
-                                            placeholder="Enter Sub Locality">
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="col-xl-6">
-
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">State <span
-                                            style="color:red;">*</span></label>
-                                    <div class="col-lg-8">
-                                        <select class="form-control" name="state" required>
-                                            <option value="">Select</option>
-                                            <?php
-																		$query1=mysqli_query($con,"select * from state");
-																		while($row1=mysqli_fetch_row($query1))
-																			{
-																	?>
-                                            <option value="<?php echo $row1['1']; ?>" class="text-captalize">
-                                                <?php echo $row1['1']; ?></option>
-                                            <?php } ?>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Locality <span
-                                            style="color:red;">*</span></label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control txtbox" name="location" required
-                                            placeholder="Enter Locality">
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                        <h4 class="card-title">Flooring</h4>
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Floor <span
-                                            style="color:red;">*</span></label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control txtbox" name="floor" required
-                                            placeholder="Enter Floor">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Total Floor</label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control txtbox" name="totalfloor"
-                                            placeholder="Enter Total Floor">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Tower <span
-                                            style="color:red;">*</span></label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control txtbox" name="tower" required
-                                            placeholder="Enter Tower">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="card-title">Area Details</h4>
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Carpet Area</label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control txtbox" name="carpetarea"
-                                            placeholder="Enter Carpet Area">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Super Builtup Area</label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control txtbox" name="superbuiltuparea"
-                                            placeholder="Enter Super Builtup Area">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Built Up Area</label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control txtbox" name="builtuparea"
-                                            placeholder="Enter Builtup Area">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Plot Area</label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control txtbox" name="plotarea"
-                                            placeholder="Enter Plot Area">
-                                    </div>
+                                <div class="form-group-full">
+                                    <label class="form-label">Description <span class="required">*</span></label>
+                                    <textarea class="form-control" name="content" rows="6" id="summernote" required placeholder="Enter detailed property description..."></textarea>
                                 </div>
                             </div>
                         </div>
 
-                        <h4 class="card-title">ROI</h4>
-
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Expected Rental Yield</label>
-                                    <div class="col-lg-8">
-                                        <input type="text" class="form-control txtbox" name="rentalyield"
-                                            placeholder="Enter Expected Rental Yield">
-                                    </div>
+                        <!-- Property Type & Details -->
+                        <div class="form-section">
+                            <h4 class="section-title"><i data-feather="home"></i> Property Type & Details</h4>
+                            <div class="form-row-group">
+                                <div class="form-group">
+                                    <label class="form-label">Property Type <span class="required">*</span></label>
+                                    <select class="form-control" name="ptype" required>
+                                        <option value="">Select Property Type</option>
+                                        <?php
+                                        $query1=mysqli_query($con,"select * from category");
+                                        while($row1=mysqli_fetch_row($query1))
+                                        {
+                                        ?>
+                                        <option value="<?php echo $row1['1']; ?>"><?php echo $row1['1']; ?></option>
+                                        <?php } ?>
+                                    </select>
                                 </div>
-                            </div>
 
-                            <div class="col-xl-6">
-                                <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Annual Property Appriciation</label>
-                                    <div class="col-lg-8">
-                                        <input type="number" class="form-control txtbox" name="propertyappretiation"
-                                            placeholder="Enter Annual Property Appriciation">
-                                    </div>
+                                <div class="form-group">
+                                    <label class="form-label">Selling Type <span class="required">*</span></label>
+                                    <select class="form-control" required name="stype">
+                                        <option value="">Select Selling Type</option>
+                                        <option value="Rent">Rent</option>
+                                        <option value="Buy">Buy</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Building Type <span class="required">*</span></label>
+                                    <select class="form-control" required name="buildingtype">
+                                        <option value="">Select Building Type</option>
+                                        <option value="Residential">Residential</option>
+                                        <option value="Commercial">Commercial</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">RERA Number</label>
+                                    <input type="text" class="form-control" name="reranumber" placeholder="Enter RERA Number">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Age of Property <span class="required">*</span></label>
+                                    <select class="form-control" required name="ageofproperty">
+                                        <option value="">Select Age</option>
+                                        <option value="0-1">0-1 Years</option>
+                                        <option value="1-2">1-2 Years</option>
+                                        <option value="2-5">2-5 Years</option>
+                                        <option value="5-10">5-10 Years</option>
+                                        <option value="10+">10+ Years</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Facing <span class="required">*</span></label>
+                                    <select class="form-control" required name="facing">
+                                        <option value="">Select Facing Direction</option>
+                                        <option value="South">South</option>
+                                        <option value="East">East</option>
+                                        <option value="North">North</option>
+                                        <option value="West">West</option>
+                                        <option value="Northwest">Northwest</option>
+                                        <option value="Southwest">Southwest</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">View</label>
+                                    <input type="text" class="form-control" name="view" placeholder="Enter View (e.g., Garden, Road, Pool)">
                                 </div>
                             </div>
                         </div>
-                        <h4 class="card-title">Details</h4>
+
+                        <!-- Price Section -->
+                        <div class="form-section">
+                            <h4 class="section-title"><i data-feather="dollar-sign"></i> Price</h4>
+                            <div class="form-row-group">
+                                <div class="form-group">
+                                    <label class="form-label">Unit Price <span class="required">*</span></label>
+                                    <input type="number" min="1" max="9999999999" class="form-control" name="price" required placeholder="Enter Unit Price">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Per Sq. Feet Price</label>
+                                    <input type="text" class="form-control" name="sqftprice" placeholder="Enter Per Sq. Feet Price">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Maintenance</label>
+                                    <input type="text" class="form-control" name="maintenance" placeholder="Enter Maintenance Charges">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Booking Amount</label>
+                                    <input type="text" class="form-control" name="bookingamount" placeholder="Enter Booking Amount">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Annual Dues Payable</label>
+                                    <input type="text" class="form-control" name="annualduespayable" placeholder="Enter Annual Dues">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Membership Charges</label>
+                                    <input type="text" class="form-control" name="membershipcharges" placeholder="Enter Membership Charges">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Location Section -->
+                        <div class="form-section">
+                            <h4 class="section-title"><i data-feather="map-pin"></i> Location</h4>
+                            <div class="form-row-group">
+                                <div class="form-group">
+                                    <label class="form-label">City <span class="required">*</span></label>
+                                    <select class="form-control" name="city" required>
+                                        <option value="">Select City</option>
+                                        <?php
+                                        $query1=mysqli_query($con,"select * from city");
+                                        while($row1=mysqli_fetch_row($query1))
+                                        {
+                                        ?>
+                                        <option value="<?php echo $row1['1']; ?>"><?php echo $row1['1']; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">State <span class="required">*</span></label>
+                                    <select class="form-control" name="state" required>
+                                        <option value="">Select State</option>
+                                        <?php
+                                        $query1=mysqli_query($con,"select * from state");
+                                        while($row1=mysqli_fetch_row($query1))
+                                        {
+                                        ?>
+                                        <option value="<?php echo $row1['1']; ?>"><?php echo $row1['1']; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Locality <span class="required">*</span></label>
+                                    <input type="text" class="form-control" name="location" required placeholder="Enter Locality">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Sub Locality</label>
+                                    <input type="text" class="form-control" name="sublocation" placeholder="Enter Sub Locality">
+                                </div>
+
+                                <div class="form-group-full">
+                                    <label class="form-label">Address <span class="required">*</span></label>
+                                    <input type="text" class="form-control" name="address" required placeholder="Enter Complete Address">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Flooring Section -->
+                        <div class="form-section">
+                            <h4 class="section-title"><i data-feather="layers"></i> Flooring</h4>
+                            <div class="form-row-group">
+                                <div class="form-group">
+                                    <label class="form-label">Floor <span class="required">*</span></label>
+                                    <input type="text" class="form-control" name="floor" required placeholder="Enter Floor Number">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Total Floors</label>
+                                    <input type="text" class="form-control" name="totalfloor" placeholder="Enter Total Floors">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Tower <span class="required">*</span></label>
+                                    <input type="text" class="form-control" name="tower" required placeholder="Enter Tower Name/Number">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Area Details Section -->
+                        <div class="form-section">
+                            <h4 class="section-title"><i data-feather="maximize"></i> Area Details</h4>
+                            <div class="form-row-group">
+                                <div class="form-group">
+                                    <label class="form-label">Carpet Area</label>
+                                    <input type="text" class="form-control" name="carpetarea" placeholder="Enter Carpet Area (sq.ft)">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Built Up Area</label>
+                                    <input type="text" class="form-control" name="builtuparea" placeholder="Enter Built Up Area (sq.ft)">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Super Built Up Area</label>
+                                    <input type="text" class="form-control" name="superbuiltuparea" placeholder="Enter Super Built Up Area (sq.ft)">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Plot Area</label>
+                                    <input type="text" class="form-control" name="plotarea" placeholder="Enter Plot Area (sq.ft)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ROI Section -->
+                        <div class="form-section">
+                            <h4 class="section-title"><i data-feather="trending-up"></i> ROI</h4>
+                            <div class="form-row-group">
+                                <div class="form-group">
+                                    <label class="form-label">Expected Rental Yield</label>
+                                    <input type="text" class="form-control" name="rentalyield" placeholder="Enter Expected Rental Yield (%)">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">Annual Property Appreciation</label>
+                                    <input type="number" class="form-control" name="propertyappretiation" placeholder="Enter Annual Appreciation (%)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property Details Section -->
+                        <div class="form-section">
+                            <h4 class="section-title"><i data-feather="info"></i> Property Details</h4>
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="form-group row">
@@ -607,8 +479,7 @@
                             </div>
                             <div class="col-xl-6">
                                 <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Room <span
-                                            style="color:red;">*</span></label>
+                                    <label class="col-lg-4 col-form-label">Room <span class="required">*</span></label>
                                     <div class="col-lg-8">
                                         <select class="form-control" required name="room">
                                             <option value="">Select</option>
@@ -815,17 +686,17 @@
 
                             </div>
 
+                            </div>
                         </div>
 
-
-
-                        <h4 class="card-title">Image & Status</h4>
-                        <div class="row">
+                        <!-- Image & Status Section -->
+                        <div class="form-section">
+                            <h4 class="section-title"><i data-feather="image"></i> Images & Status</h4>
+                            <div class="form-row-group">
                             <div class="col-xl-6">
 
                                 <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Image 1 <span
-                                            style="color:red;">*</span></label>
+                                    <label class="col-lg-4 col-form-label">Image 1 <span class="required">*</span></label>
                                     <div class="col-lg-8">
                                         <input class="form-control   txtbox" name="aimage" type="file" required>
                                     </div>
@@ -834,8 +705,7 @@
                             <div class="col-xl-6">
 
                                 <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Image 2 <span
-                                            style="color:red;">*</span></label>
+                                    <label class="col-lg-4 col-form-label">Image 2 <span class="required">*</span></label>
                                     <div class="col-lg-8">
                                         <input class="form-control txtbox" name="aimage1" type="file" required>
                                     </div>
@@ -843,8 +713,7 @@
                             </div>
                             <div class="col-xl-6">
                                 <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Image 3 <span
-                                            style="color:red;">*</span></label>
+                                    <label class="col-lg-4 col-form-label">Image 3 <span class="required">*</span></label>
                                     <div class="col-lg-8">
                                         <input class="form-control txtbox" name="aimage2" type="file" required>
                                     </div>
@@ -871,8 +740,7 @@
 
                             <div class="col-xl-6">
                                 <div class="form-group row">
-                                    <label class="col-lg-4 col-form-label">Status <span
-                                            style="color:red;">*</span></label>
+                                    <label class="col-lg-4 col-form-label">Status <span class="required">*</span></label>
                                     <div class="col-lg-8">
                                         <select class="form-control" required name="status">
                                             <option value="">Select Status</option>
@@ -885,11 +753,13 @@
                             </div>
 
 
+                            </div>
                         </div>
 
-
-                        <h4 class="card-title">Map & Video</h4>
-                        <div class="row">
+                        <!-- Map & Video Section -->
+                        <div class="form-section">
+                            <h4 class="section-title"><i data-feather="map"></i> Map & Video</h4>
+                            <div class="form-row-group">
                             <div class="col-xl-6">
 
 
@@ -914,13 +784,15 @@
 
 
                             </div>
+                            </div>
                         </div>
 
-
-                        <h4 class="card-title">Amenities</h4>
-                        <div class="row">
-
-                            <table style="font-size:15px;">
+                        <!-- Amenities Section -->
+                        <div class="form-section">
+                            <h4 class="section-title"><i data-feather="check-circle"></i> Amenities</h4>
+                            <div class="form-row-group">
+                                <div class="form-group-full">
+                                    <table class="amenities-table">
                                 <tr>
                                     <?php
 									$count=0;
@@ -932,17 +804,12 @@
 								
 											?>
 
-                                    <td style="width:200px;  ">
-                                        <center><?php echo $amenity;?><input type="hidden"
-                                                name="amenity[<?php echo $count; ?>][amenity]"
-                                                value="<?php echo $amenity;?>" />
-                                        </center>
+                                    <td>
+                                        <?php echo $amenity;?>
+                                        <input type="hidden" name="amenity[<?php echo $count; ?>][amenity]" value="<?php echo $amenity;?>" />
                                     </td>
-
-                                    <td style="width:20px; ">
-                                        <center><input type="checkbox" name="amenity[<?php echo $count; ?>][add]"
-                                                value="Add" />
-                                        </center>
+                                    <td>
+                                        <input type="checkbox" name="amenity[<?php echo $count; ?>][add]" value="Add" />
                                     </td>
                                     <?php if(++$count%4 == 0) echo '</tr><tr>'; ?>
 
@@ -952,26 +819,22 @@
 } ?>
 
                                 </tr>
-                            </table>
-
-                        </div>
-
-
-
-
-                        <br><br>
-                        <div class="row mt-3">
-                            <div class="col-md-12">
-                                <div align="center">
-                                    <button type="submit" class="theme-btn btn-one" name="add">Submit</button>
+                                    </table>
                                 </div>
                             </div>
-
                         </div>
-                    </div>
-                </form>
 
 
+
+
+                        <!-- Submit Button -->
+                        <div class="form-section form-submit-section">
+                            <button type="submit" class="theme-btn btn-one" name="add">
+                                <i data-feather="send"></i> Submit Property
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

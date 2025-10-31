@@ -118,6 +118,11 @@
 <!-- main-js -->
 <script src="../assets/js/script.js"></script>
 
+<script>
+    // Initialize Feather Icons
+    feather.replace();
+</script>
+
 </body><!-- End of .page_wrapper -->
 
 </html>

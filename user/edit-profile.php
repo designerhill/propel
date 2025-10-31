@@ -52,49 +52,63 @@ if(isset($_POST['login']))
 
 <section class="myprofile-section sec-pad">
     <div class="container">
-
         <div class="main-content">
+            <!-- Navigation Tabs -->
+            <div class="tabs">
+                <a href="profile.php" class="tab active">Profile</a>
+                <a href="my-listing.php" class="tab">My Listings</a>
+                <a href="communication.php" class="tab">Communication</a>
+                <!-- <a href="refer-and-earn.php" class="tab">Refer & Earn</a> -->
+            </div>
+
+            <!-- Edit Profile Content -->
             <div class="profile-details">
-                <div class="tabs">
-                    <a href="profile.php" class="tab active">Profile</a>
-                    <a href="my-listing.php" class="tab">My Listings</a>
-
-                    <a href="communication.php" class="tab">Communication</a>
-
-
+                <div class="cards">
+                    <button class="tab active">Edit Personal Details</button>
                 </div>
+
                 <div class="details-section">
                     <form action="" method="post" enctype="multipart/form-data">
+                        <!-- Profile Image -->
                         <div class="detail-row">
                             <span>Profile Image</span>
-                            <?php
-                        if($row['image']!='')
-                        {
-                          
-                        ?>
-                            <img src="userimg/<?php echo $row['image'];?>" alt="Profile Image" class="profile-img">
-                            <?php
-                        }
-                        ?>
-                            <input class="form-control" type="file" name="aimage" accept="image/*">
+                            <div style="flex: 1;">
+                                <?php
+                                if($row['image']!='')
+                                {
+                                ?>
+                                <img src="userimg/<?php echo $row['image'];?>" alt="Profile Image" class="profile-img">
+                                <?php
+                                }
+                                ?>
+                                <input class="form-control" type="file" name="aimage" accept="image/*">
+                            </div>
                         </div>
+
+                        <!-- Name -->
                         <div class="detail-row">
                             <span>Name</span>
                             <input type="text" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '');"
                                 class="form-control" value="<?php echo $row['name'];?>" placeholder="Enter your name"
                                 name="name" required>
                         </div>
+
+                        <!-- Phone Number -->
                         <div class="detail-row">
                             <span>Phone Number</span>
                             <input type="number" class="form-control" value="<?php echo $row['mobile'];?>"
-                                placeholder="Enter your email" name="mobile" readonly>
+                                placeholder="Phone number" name="mobile" readonly>
                         </div>
-                        <div class=" detail-row">
+
+                        <!-- Email -->
+                        <div class="detail-row">
                             <span>Email</span>
                             <input type="email" oninput="this.value = this.value.replace(/[^a-zA-Z0-9@._-]/g, '');"
                                 class="form-control" name="email" value="<?php echo $row['email'];?>"
                                 placeholder="Enter your email">
                         </div>
+
+                        <!-- City -->
                         <div class="detail-row">
                             <span>City</span>
                             <input type="text" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '');"
@@ -102,14 +116,18 @@ if(isset($_POST['login']))
                                 placeholder="Enter your city name">
                         </div>
 
+                        <!-- Date of Birth -->
                         <div class="detail-row">
                             <span>Date of Birth</span>
                             <input type="date" id="birthdate" class="form-control" name="dob"
                                 value="<?php echo $row['dob'];?>">
                         </div>
+
                         <!-- Save Button -->
                         <div class="detail-row">
-                            <button class="theme-btn btn-one" type="submit" name="login">Save</button>
+                            <button class="theme-btn btn-one" type="submit" name="login">
+                                <i data-feather="save"></i> Save Changes
+                            </button>
                         </div>
                     </form>
                 </div>

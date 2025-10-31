@@ -1,0 +1,830 @@
+/* Custom styles for user dashboard pages */
+
+/* Feather Icons Global Styles */
+[data-feather] {
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+/* User Profile Section */
+.myprofile-section {
+  background: #f6f7fb;
+  padding: 40px 0;
+}
+
+.myprofile-section .container {
+  max-width: 1200px;
+}
+
+/* Main Content Card */
+.main-content {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+  border: 1px solid #eef0f2;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Navigation Tabs */
+.tabs {
+  display: flex;
+  gap: 0;
+  background: #fafbfc;
+  border-bottom: 2px solid #eef0f2;
+  padding: 0 24px;
+  /* overflow-x: auto; */
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 16px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  margin-bottom: -2px;
+}
+
+.tab:hover {
+  color: #fbb84d;
+  background: rgba(251,184,77,0.04);
+}
+
+.tab.active {
+  border-bottom-color: #fbb84d;
+  color: #fbb84d;
+  font-weight: 700;
+}
+
+/* Profile Details Container */
+.profile-details {
+  padding: 32px;
+}
+
+/* Header with Edit Button */
+.cards {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #eef0f2;
+}
+
+.cards button.tab {
+  font-size: 20px;
+  font-weight: 700;
+  color: #151515;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: default;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cards button.tab i {
+  color: #fbb84d;
+  width: 24px;
+  height: 24px;
+  stroke-width: 2.5;
+}
+
+.edit-profile {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #fbb84d;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid #fbb84d;
+}
+
+.edit-profile:hover {
+  background: #e2a641;
+  border-color: #e2a641;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(251,184,77,0.3);
+}
+
+.edit-profile i {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2.5;
+}
+
+/* Details Section */
+.details-section {
+  border: none;
+  padding: 0;
+}
+
+.detail-row {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row > span:first-child {
+  font-weight: 600;
+  font-size: 14px;
+  color: #6b7280;
+  width: 35%;
+  min-width: 140px;
+  padding-right: 24px;
+  text-align: left;
+}
+
+.detail-row > span:last-child,
+.detail-row > .profile-img {
+  font-size: 15px;
+  color: #151515;
+  flex: 1;
+  text-align: left;
+  word-break: break-word;
+}
+
+/* Profile Image Section */
+.profile-image-section {
+  align-items: center;
+  padding: 24px 0 !important;
+  margin-bottom: 8px;
+}
+
+.profile-img-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fbb84d;
+  box-shadow: 0 8px 24px rgba(251,184,77,0.25);
+  transition: all 0.3s ease;
+  background: #ffffff;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(251,184,77,0.35);
+}
+
+/* Form Elements in Edit Mode */
+.detail-row .form-control {
+  width: 100%;
+  height: 48px;
+  padding: 10px 16px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  background: #ffffff;
+}
+
+.detail-row .form-control:focus {
+  outline: none;
+  border-color: #fbb84d;
+  box-shadow: 0 0 0 3px rgba(251,184,77,0.15);
+}
+
+.detail-row .form-control[readonly] {
+  background: #f9fafb;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.detail-row input[type="file"] {
+  border: 1.5px dashed #e5e7eb;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.detail-row input[type="file"]:hover {
+  border-color: #fbb84d;
+}
+
+/* Form Labels */
+.col-form-label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+/* Buttons */
+.txtbox {
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border: 1.5px solid #fbb84d !important;
+  font-size: 14px;
+  color: #fbb84d;
+  font-weight: 600;
+  background: transparent;
+  border-radius: 10px;
+  padding: 0 20px;
+  transition: all 0.3s ease;
+}
+
+.txtbox:hover {
+  background: #fbb84d;
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .myprofile-section {
+    padding: 20px 0;
+  }
+
+  .profile-details {
+    padding: 20px;
+  }
+
+  .tabs {
+    padding: 0 16px;
+  }
+
+  .tab {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .edit-profile {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .detail-row > span:first-child {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 4px;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Profile header section styling */
+.myprofile-section h4 {
+  position: relative;
+  display: block;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #151515;
+}
+
+/* Additional styling for interaction cards if used in other pages */
+.interaction-cards .card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #eef0f2;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.interaction-cards .card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  border-color: #fbb84d;
+}
+
+.icon {
+  font-size: 30px;
+  color: #fbb84d;
+  margin-right: 16px;
+}
+
+.details p {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.rate-experience {
+  margin-left: auto;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #10b981;
+  background-color: #d1fae5;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rate-experience:hover {
+  background-color: #a7f3d0;
+}
+
+/* Sidebar if needed */
+.sidebar {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  width: 240px;
+  border: 1px solid #eef0f2;
+}
+
+.sidebar h2 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #fbb84d;
+  font-weight: 700;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #6b7280;
+  display: block;
+  padding: 12px 16px;
+  margin: 6px 0;
+  border-radius: 8px;
+  text-align: left;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #fbb84d;
+  color: #ffffff;
+}
+
+/* Mobile menu hamburger */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+/* ========================================
+   My Listings Page Styles
+   ======================================== */
+
+.property-list-item {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.property-list-item .row {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.property-list-item .row:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.property-list-item figure.image {
+  margin: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.property-list-item figure.image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.property-list-item figure.image:hover img {
+  transform: scale(1.05);
+}
+
+.property-list-item .properties__title h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #151515;
+  margin-bottom: 8px;
+}
+
+.property-list-item .properties__title h4 a {
+  color: #151515;
+  transition: color 0.3s ease;
+}
+
+.property-list-item .properties__title h4 a:hover {
+  color: #fbb84d;
+}
+
+.property-list-item .properties__title h6 {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.property-list-item .row.mt-3 {
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.property-list-item .row.mt-3:hover {
+  transform: none;
+}
+
+.property-list-item .row.mt-3 > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.property-list-item .row.mt-3 i {
+  color: #fbb84d;
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+}
+
+/* Edit Property Button */
+.edit-property-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #3b82f6;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.edit-property-btn:hover {
+  background: #2563eb;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59,130,246,0.3);
+}
+
+.edit-property-btn i {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2.5;
+}
+
+/* Approved Badge */
+.approved-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #10b981;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.approved-badge i {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .property-list-item {
+    padding: 12px;
+  }
+
+  .property-list-item .row {
+    padding: 16px;
+  }
+
+  .property-list-item figure.image img {
+    height: 200px;
+  }
+
+  .property-list-item .row.mt-3 {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* ========================================
+   Property Form Styles
+   ======================================== */
+
+.property-form-container {
+  padding: 32px;
+}
+
+.property-form {
+  width: 100%;
+}
+
+/* Form Sections */
+.form-section {
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.form-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #151515;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title i {
+  color: #fbb84d;
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.5;
+}
+
+/* Form Groups */
+.form-row-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group-full {
+  grid-column: 1 / -1;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.required {
+  color: #ef4444;
+  font-weight: 700;
+}
+
+/* Form Controls */
+.property-form .form-control,
+.property-form select.form-control,
+.property-form textarea.form-control {
+  width: 100%;
+  height: 48px;
+  padding: 12px 16px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #151515;
+  transition: all 0.2s ease;
+  background: #ffffff;
+}
+
+.property-form textarea.form-control {
+  height: auto;
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.property-form .form-control:focus,
+.property-form select.form-control:focus,
+.property-form textarea.form-control:focus {
+  outline: none;
+  border-color: #fbb84d;
+  box-shadow: 0 0 0 3px rgba(251,184,77,0.15);
+}
+
+.property-form .form-control::placeholder {
+  color: #9ca3af;
+}
+
+/* File Inputs */
+.property-form input[type="file"].form-control {
+  padding: 10px 16px;
+  cursor: pointer;
+  border-style: dashed;
+}
+
+.property-form input[type="file"].form-control:hover {
+  border-color: #fbb84d;
+  background: rgba(251,184,77,0.03);
+}
+
+/* Summernote Editor */
+#summernote {
+  border-radius: 10px;
+}
+
+.note-editor.note-frame {
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.note-editor.note-frame:hover,
+.note-editor.note-frame.note-focus {
+  border-color: #fbb84d;
+}
+
+.note-editable {
+  background-color: #ffffff !important;
+  min-height: 150px;
+}
+
+/* Amenities Table */
+.amenities-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.amenities-table tr {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.amenities-table td {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.amenities-table input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #fbb84d;
+}
+
+.amenities-table input[type="checkbox"]:hover {
+  transform: scale(1.1);
+}
+
+/* Submit Button */
+.form-submit-section {
+  text-align: center;
+  padding-top: 12px !important;
+}
+
+.property-form .theme-btn.btn-one {
+  min-width: 200px;
+  padding: 14px 36px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.property-form .theme-btn.btn-one:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(251,184,77,0.4);
+}
+
+.property-form .theme-btn.btn-one i {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 6px;
+  stroke-width: 2.5;
+}
+
+/* Alert Messages */
+.property-form-container .alert {
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+}
+
+.property-form-container .alert-success {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.property-form-container .alert-warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .property-form-container {
+    padding: 20px;
+  }
+
+  .form-row-group {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+
+  .property-form .form-control,
+  .property-form select.form-control {
+    height: 44px;
+    font-size: 13px;
+  }
+
+  .property-form .theme-btn.btn-one {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* Remove old txtbox styling */
+.property-form .txtbox {
+  border: 1.5px solid #e5e7eb !important;
+  color: #151515 !important;
+  height: 48px;
+  line-height: normal;
+}
+
+.property-form .txtbox:focus {
+  border-color: #fbb84d !important;
+}

@@ -25,8 +25,14 @@ $result2=mysqli_query($con,$query2) or die(mysqli_error($con));
             </div>
             <div class="profile-details">
                 <div class="cards">
-                    <button class="tab active">My Listings</button> <a href="add-property.php" class="edit-profile">Add
-                        Property<i class="icon-icon-51"></i></a>
+                    <button class="tab active">
+                        <i data-feather="list"></i>
+                        My Listings
+                    </button>
+                    <a href="add-property.php" class="edit-profile">
+                        <i data-feather="plus-circle"></i>
+                        <span>Add Property</span>
+                    </a>
                 </div>
 
 
@@ -35,7 +41,7 @@ $result2=mysqli_query($con,$query2) or die(mysqli_error($con));
                                     while($row1=mysqli_fetch_array($result2))
                                     {
                                         ?>
-                    <div class="col-lg-12 col-md-12 col-sm-12 pb-30" style="padding:20px;">
+                    <div class="col-lg-12 col-md-12 col-sm-12 property-list-item">
                         <div class="row">
                             <div class="col-md-4 col-12">
                                 <figure class="image">
@@ -58,9 +64,9 @@ if($row1['isapproved']==0)
 {
     ?>
                                             <a href="editproperty.php?id=<?php echo $row1['pid'];?>"
-                                                class="edit-profile mt-3"
-                                                style="background:blue; padding:0px 10px; color:white; width:45px; border-radius:10px;">
-                                                Edit</a>
+                                                class="edit-property-btn">
+                                                <i data-feather="edit-3"></i> Edit
+                                            </a>
                                             <?php
 }
 ?>
@@ -70,24 +76,23 @@ if($row1['isapproved']==0)
 
                                     </div>
                                     <div class="row mt-3">
-                                        <div class="col-md-3"><i class="icon-14"></i> <?php echo $row1['bedroom'];?>
-                                            Beds
+                                        <div class="col-md-3">
+                                            <i data-feather="moon"></i> <?php echo $row1['bedroom'];?> Beds
                                         </div>
-                                        <div class="col-md-3"><i class="icon-15"></i> <?php echo $row1['bathroom'];?>
-                                            Baths
+                                        <div class="col-md-3">
+                                            <i data-feather="droplet"></i> <?php echo $row1['bathroom'];?> Baths
                                         </div>
-                                        <div class="col-md-3"><i class="icon-16"></i> <?php echo $row1['carpetarea'];?>
-                                            Sq
-                                            Ft
+                                        <div class="col-md-3">
+                                            <i data-feather="maximize"></i> <?php echo $row1['carpetarea'];?> Sq Ft
                                         </div>
                                     </div>
                                     <?php
 if($row1['isapproved']==1)
 {
     ?>
-                                    <p class="mt-2"
-                                        style="background:green; padding:5px; color:white; width:75px; border-radius:10px;">
-                                        Approved</p>
+                                    <p class="mt-2 approved-badge">
+                                        <i data-feather="check-circle"></i> Approved
+                                    </p>
                                     <?php
 }
 ?>
