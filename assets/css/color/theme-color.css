@@ -79,7 +79,11 @@
 
 .theme-btn.btn-one{
   background-color: #fbb84d;
-  border: 2px solid #fbb84d;
+  /* border: 2px solid #fbb84d; */
+}
+.theme-btn.btn-one:hover{
+  
+  color: #ffffff;
 }
 
 .search-field .top-search .search-btn button{
