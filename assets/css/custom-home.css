@@ -28,9 +28,9 @@
     transition: all 0.2s;
 }
 .search-field-section .tab-btn.active-btn {
-    border: 2px solid #bc883f;
-    color: #bc883f;
-    box-shadow: 0 2px 8px rgba(255,90,95,0.08);
+    border: 2px solid #fbb84d;
+    color: #fbb84d;
+    box-shadow: 0 2px 8px rgba(251,184,77,0.08);
 }
 .search-field-section .form-group {
     margin-bottom: 0;
@@ -45,7 +45,7 @@
     position: relative;
 }
 .search-field-section .field-input i {
-    color: #bc883f;
+    color: #fbb84d;
     position: absolute;
     left: 16px;
     top: 50%;
@@ -60,14 +60,14 @@
 }
 .search-field-section input[type="search"]:focus {
     outline: none;
-    border-color: #bc883f;
-    box-shadow: 0 0 0 3px rgba(255,90,95,0.12);
+    border-color: #fbb84d;
+    box-shadow: 0 0 0 3px rgba(251,184,77,0.12);
 }
 .search-field-section .select-box {
     position: relative;
 }
 .search-field-section .select-box i {
-    color: #bc883f;
+    color: #fbb84d;
     position: absolute;
     left: 16px;
     top: 17px;
@@ -84,8 +84,8 @@
 }
 .search-field-section select.wide:focus {
     outline: none;
-    border-color: #bc883f;
-    box-shadow: 0 0 0 3px rgba(255,90,95,0.12);
+    border-color: #fbb84d;
+    box-shadow: 0 0 0 3px rgba(251,184,77,0.12);
 }
 .search-field-section .select-box .nice-select {
     border: 1.5px solid #e5e7eb;
@@ -98,11 +98,11 @@
 .search-field-section .select-box .nice-select:focus,
 .search-field-section .select-box .nice-select.open,
 .search-field-section .select-box .nice-select:hover {
-    border-color: #bc883f;
-    box-shadow: 0 0 0 3px rgba(255,90,95,0.12);
+    border-color: #fbb84d;
+    box-shadow: 0 0 0 3px rgba(251,184,77,0.12);
 }
 .search-field-section button[type="submit"] {
-    background: #bc883f;
+    background: #fbb84d;
     border: none;
     color: #fff;
     border-radius: 12px;
@@ -113,8 +113,8 @@
     box-shadow: 0 2px 8px rgba(255,90,95,0.10);
 }
 .search-field-section button[type="submit"]:hover {
-    background: #bc883f;
-    box-shadow: 0 4px 16px rgba(255,90,95,0.18);
+    background: #f2ac3a;
+    box-shadow: 0 4px 16px rgba(251,184,77,0.18);
 }
 
 /* Helpers for search mode toggle */
@@ -151,4 +151,754 @@
     .search-field-section .inner-container {
         padding: 18px;
     }
+}
+
+/* ========================================
+   Banner Section Styles
+   ======================================== */
+.banner-style-two {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 120px 0 80px;
+}
+
+.banner-style-two .content-box {
+    padding-right: 30px;
+}
+
+.banner-style-two h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.banner-style-two p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.banner-style-two .image-box img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+/* ========================================
+   Property Categories Section
+   ======================================== */
+.property-categories-section {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.property-categories-section a {
+    text-decoration: none;
+}
+
+.property-categories-section .category-item {
+    padding: 25px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.property-categories-section .category-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.property-categories-section .icon-box {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+    background: #fff3f4;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.property-categories-section .icon-box i {
+    font-size: 32px;
+    color: #fbb84d;
+}
+
+.property-categories-section h6 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    margin: 0;
+}
+
+/* ========================================
+   Buy/Sell/Rent Section
+   ======================================== */
+.buy-sell-rent-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.buy-sell-rent-section .action-box {
+    background: #fff;
+    padding: 50px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.buy-sell-rent-section .action-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.buy-sell-rent-section .icon-wrapper {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 25px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.buy-sell-rent-section .icon-wrapper > div {
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.buy-sell-rent-section .icon-wrapper i.icon-24,
+.buy-sell-rent-section .icon-wrapper i.icon-25,
+.buy-sell-rent-section .icon-wrapper i.icon-26 {
+    font-size: 42px;
+    color: #fbb84d;
+}
+
+.buy-sell-rent-section .icon-wrapper span {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buy-sell-rent-section .action-block:nth-child(1) .icon-wrapper span {
+    background: #fbb84d;
+}
+
+.buy-sell-rent-section .action-block:nth-child(2) .icon-wrapper span {
+    background: #4CAF50;
+}
+
+.buy-sell-rent-section .action-block:nth-child(3) .icon-wrapper span {
+    background: #2196F3;
+}
+
+.buy-sell-rent-section .icon-wrapper span i {
+    font-size: 14px;
+    color: #fff;
+}
+
+.buy-sell-rent-section h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.buy-sell-rent-section p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.buy-sell-rent-section a {
+    display: inline-block;
+    padding: 12px 35px;
+    background: #fff;
+    border: 2px solid #fbb84d;
+    color: #fbb84d;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.buy-sell-rent-section a:hover {
+    background: #fbb84d;
+    color: #fff;
+}
+
+/* ========================================
+   Featured Properties Section
+   ======================================== */
+.feature-style-two {
+    background: #fff;
+    padding: 80px 0;
+}
+
+.feature-style-two .sec-title {
+    margin-bottom: 50px;
+}
+
+.feature-style-two .sec-title h5 {
+    color: #fbb84d;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.feature-style-two .sec-title h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+}
+
+.feature-style-two .feature-block-one a {
+    text-decoration: none;
+}
+
+.feature-style-two .inner-box {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.feature-style-two .inner-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.feature-style-two .image-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-style-two .image-box figure {
+    margin: 0;
+    overflow: hidden;
+    height: 260px;
+}
+
+.feature-style-two .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.feature-style-two .inner-box:hover .image-box img {
+    transform: scale(1.05);
+}
+
+.feature-style-two .batch {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #fbb84d;
+    color: #fff;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.feature-style-two .price-tag {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(255,255,255,0.95);
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-weight: 700;
+    color: #222;
+}
+
+.feature-style-two .lower-content {
+    padding: 25px;
+}
+
+.feature-style-two .author-info {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.feature-style-two .author {
+    display: flex;
+    align-items: center;
+}
+
+.feature-style-two .author-thumb {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 10px 0 0;
+}
+
+.feature-style-two .author-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-style-two .author h6 {
+    margin: 0;
+    font-size: 13px;
+    color: #666;
+    font-weight: 500;
+}
+
+.feature-style-two .buy-btn span {
+    background: #e8f5e9;
+    color: #4CAF50;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.feature-style-two .title-text h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+}
+
+.feature-style-two .more-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.feature-style-two .more-details li {
+    font-size: 13px;
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+
+.feature-style-two .more-details li i {
+    margin-right: 5px;
+    color: #fbb84d;
+}
+
+/* ========================================
+   Best Deals Section
+   ======================================== */
+.deals-style-two {
+    background: #f8f9fa;
+    padding: 80px 0;
+}
+
+.deals-style-two .sec-title {
+    margin-bottom: 50px;
+}
+
+.deals-style-two .sec-title h5 {
+    color: #fbb84d;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.deals-style-two .sec-title h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+}
+
+.deals-style-two .single-item a {
+    text-decoration: none;
+}
+
+.deals-style-two .deals-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.deals-style-two .deals-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.deals-style-two .deals-card .row {
+    margin: 0;
+}
+
+.deals-style-two .deals-card .deals-block {
+    padding: 0;
+}
+
+.deals-style-two .image-box {
+    position: relative;
+    height: 100%;
+    min-height: 350px;
+}
+
+.deals-style-two .image-box figure {
+    margin: 0;
+    height: 100%;
+}
+
+.deals-style-two .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.deals-style-two .buy-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.deals-style-two .buy-btn span {
+    background: rgba(255,255,255,0.95);
+    color: #4CAF50;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.deals-style-two .image-box > div:last-child {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fbb84d;
+    color: #fff;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.deals-style-two .deals-block-one .inner-box {
+    padding: 40px;
+}
+
+.deals-style-two .title-text {
+    margin-bottom: 20px;
+}
+
+.deals-style-two .title-text h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.deals-style-two .price-box {
+    margin-bottom: 20px;
+}
+
+.deals-style-two .price-info h6 {
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.deals-style-two .price-info h4 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fbb84d;
+    margin: 0;
+}
+
+.deals-style-two .author-box figure {
+    text-align: center;
+}
+
+.deals-style-two .author-box img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.deals-style-two .author-box span {
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+
+.deals-style-two .deals-block-one .more-details {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.deals-style-two .deals-block-one .more-details li {
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+
+.deals-style-two .deals-block-one .more-details li i {
+    margin-right: 8px;
+    color: #fbb84d;
+}
+
+.deals-style-two .btn-box button {
+    background: #fbb84d;
+    border: none;
+    color: #fff;
+    padding: 12px 35px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.deals-style-two .btn-box button:hover {
+    background: #e2a641;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(251,184,77,0.3);
+}
+
+/* ========================================
+   Testimonial Section
+   ======================================== */
+.testimonial-style-four {
+    background: #fff;
+    padding: 80px 0;
+}
+
+.testimonial-style-four .sec-title {
+    margin-bottom: 50px;
+}
+
+.testimonial-style-four .sec-title h5 {
+    color: #fbb84d;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.testimonial-style-four .sec-title h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+}
+
+.testimonial-style-four .sec-title p {
+    color: #666;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.testimonial-style-four .agent-profile {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 60px 40px;
+    text-align: left;
+    height: 100%;
+}
+
+.testimonial-style-four .agent-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.testimonial-style-four .agent-info {
+    padding-left: 20px;
+}
+
+.testimonial-style-four .agent-info h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.testimonial-style-four .agent-info p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+}
+
+.testimonial-style-four .rating {
+    margin: 15px 0;
+}
+
+.testimonial-style-four .rating i {
+    color: #ffc107;
+    font-size: 14px;
+}
+
+.testimonial-style-four .social-links {
+    margin-top: 20px;
+}
+
+.testimonial-style-four .social-links a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 8px;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.testimonial-style-four .social-links a:hover {
+    background: #fbb84d;
+    color: #fff;
+}
+
+.testimonial-style-four .testimonial-content {
+    background: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    text-align: left;
+    height: 100%;
+    position: relative;
+}
+
+.testimonial-style-four .quote-icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.testimonial-style-four .quote-icon i {
+    font-size: 60px;
+    color: #fbb84d;
+    opacity: 0.1;
+}
+
+.testimonial-style-four .testimonial-content h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-style-four .testimonial-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.testimonial-style-four .author-details {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.testimonial-style-four .author-details h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+}
+
+.testimonial-style-four .author-details span {
+    margin-left: auto;
+    font-size: 13px;
+    color: #999;
+}
+
+.testimonial-style-four .testimonial-carousel {
+    margin-top: 50px;
+}
+
+.testimonial-style-four .testimonial-block-three .inner-box {
+    background: #f8f9fa;
+    padding: 35px 30px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.testimonial-style-four .testimonial-block-three .inner-box:hover {
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transform: translateY(-5px);
+}
+
+.testimonial-style-four .testimonial-block-three .icon-box {
+    margin-bottom: 20px;
+}
+
+.testimonial-style-four .testimonial-block-three .icon-box i {
+    font-size: 32px;
+    color: #fbb84d;
+}
+
+.testimonial-style-four .testimonial-block-three h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.testimonial-style-four .testimonial-block-three p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.testimonial-style-four .testimonial-block-three h5 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+    margin: 0;
+}
+
+/* ========================================
+   CTA Section
+   ======================================== */
+.cta-section .text p {
+    color: #fff;
 }

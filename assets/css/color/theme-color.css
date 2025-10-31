@@ -3,19 +3,19 @@
 /* theme-color */
 
 .scroll-top{
-  background: #0172BB;
+  background: #fbb84d;
 }
 
 .mobile-menu .contact-info ul li a:hover{
-  color: #0172BB;
+  color: #fbb84d;
 }
 
 .mobile-menu .social-links li a:hover{
-  color:#0172BB;  
+  color:#fbb84d;  
 }
 
 .switcher .switch_btn button{
-  background: #0172BB;
+  background: #fbb84d;
 }
 
 .main-menu .navigation > li.current > a,
@@ -24,90 +24,90 @@
 }
 
 .main-menu .navigation > li > ul{
-  border-top: 3px solid #0172BB;
+  border-top: 3px solid #fbb84d;
 }
 
 .main-menu .navigation > li > ul > li > a:hover{
-  color:#0172BB;
+  color:#fbb84d;
 }
 
 .main-menu .navigation li.current.dropdown .dropdown-btn,
 .main-menu .navigation li:hover .dropdown-btn{
-  color: #0172BB;
+  color: #fbb84d;
 }
 
 .main-menu .navigation > li > ul > li > ul{
-  border-top: 3px solid #0172BB;
+  border-top: 3px solid #fbb84d;
 }
 
 .header-top .info li a:hover{
-  color: #0172BB;
+  color: #fbb84d;
 }
 
 .header-top .info li i{
-  color: #0172BB;
+  color: #fbb84d;
 }
 
 .header-top .social-links li a:hover{
-  color: #0172BB;
+  color: #fbb84d;
 }
 
 .header-top .sign-box a:hover{
-  color: #0172BB;
+  color: #fbb84d;
 }
 
 .header-top .sign-box a i{
-  color: #0172BB;
+  color: #fbb84d;
 }
 
 .main-menu .navigation > li > ul > li > a:hover,
 .main-menu .navigation > li > .megamenu li > a:hover{
-  color: #0172BB;
+  color: #fbb84d;
 }
 
 .main-menu .navigation > li > ul > li > ul > li > a:hover{
-  color: #0172BB;
+  color: #fbb84d;
 }
 
 .main-menu .navigation > li.dropdown > .megamenu{
-  border-top: 3px solid #0172BB;
+  border-top: 3px solid #fbb84d;
 }
 
 .main-menu .navigation > li > a:before{
-  background-color: #0172BB;
+  background-color: #fbb84d;
 }
 
 .theme-btn.btn-one{
-  background-color: #0172BB;
-  border: 2px solid #0172BB;
+  background-color: #fbb84d;
+  border: 2px solid #fbb84d;
 }
 
 .search-field .top-search .search-btn button{
-  background-color: #0172BB;
+  background-color: #fbb84d;
 }
 
 .search-field .tab-btn-box li.active-btn{
-  background-color: #0172BB;
+  background-color: #fbb84d;
 }
 
 .ui-slider-horizontal .ui-slider-range{
-  background-color: #0172BB;
+  background-color: #fbb84d;
 }
 
 .ui-slider .ui-slider-handle{
-  background-color: #0172BB;
+  background-color: #fbb84d;
 }
 
 .search-field .advanced-search .range-box input{
-  color: #0172BB;
+  color: #fbb84d;
 }
 
 .category-block-one .inner-box:before{
-  background-color: #0172BB;
+  background-color: #fbb84d;
 }
 
 .sec-title h5{
-  color: #0172BB;
+  color: #fbb84d;
 }
 
 .feature-block-one .inner-box .lower-content .author-info .buy-btn a:hover{
@@ -580,3 +580,29 @@
 .blog-details-content .comments-area .comment .text a:hover{
   color: #0172BB;
 }
+
+/* ========================================
+   Theme Overrides (ensure new brand color wins)
+   ======================================== */
+.bg-color-3 { background-color: #fbb84d !important; }
+.theme-btn.btn-one { background-color: #fbb84d !important; border-color: #fbb84d !important; }
+.theme-btn.btn-three:before { background-color: #fbb84d !important; }
+.theme-btn.btn-three:hover { border-color: #fbb84d !important; }
+.sec-title h5 { color: #fbb84d !important; }
+.pagination li a:hover,
+.pagination li a.current { border-color: #fbb84d !important; background-color: #fbb84d !important; }
+.default-form input:focus,
+.default-form textarea:focus { border-color: #fbb84d !important; }
+.nav-style-one .owl-nav button:hover { background-color: #fbb84d !important; border-color: #fbb84d !important; }
+.banner-carousel .owl-dots .owl-dot.active span,
+.banner-carousel .owl-dots .owl-dot span:hover,
+.dots-style-one .owl-dots .owl-dot.active span,
+.dots-style-one .owl-dots .owl-dot span:hover { background-color: #fbb84d !important; }
+.scroll-top { background: #fbb84d !important; }
+.main-menu .navigation > li > a:before { background-color: #fbb84d !important; }
+.search-field .tab-btn-box li.active-btn { background-color: #fbb84d !important; }
+.ui-slider-horizontal .ui-slider-range, .ui-slider .ui-slider-handle { background-color: #fbb84d !important; }
+.news-block-one .inner-box .lower-content h4 a:hover,
+.news-block-one .inner-box .lower-content h3 a:hover,
+.news-block-two .inner-box .content-box h4 a:hover { color: #fbb84d !important; }
+.ragister-section .inner-box .othre-text p a { color: #fbb84d !important; }

@@ -144,22 +144,10 @@ if (empty($_POST['name'])) {
     <link href="assets/css/switcher-style.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
+    <link href="assets/css/custom-auth.css" rel="stylesheet">
     <?php
 include('gtag.php');
 ?>
-    <style>
-    .error {
-        color: red;
-        display: none;
-
-
-    }
-
-    .input-error {
-        border-color: red;
-
-    }
-    </style>
 </head>
 
 
@@ -175,89 +163,68 @@ include('tagmanager.php');
 
         <?php $header_style = 'inner'; include('header.php'); ?>
 
-        <!--Page Title-->
-        <section class="page-title-two bg-color-1 centred">
-            <div class="pattern-layer">
-                <div class="pattern-1" style="background-image: url(assets/images/shape/shape-9.png);"></div>
-                <div class="pattern-2" style="background-image: url(assets/images/shape/shape-10.png);"></div>
-            </div>
+      
+
+
+        <!-- auth-section (Sign Up) -->
+        <section class="ragister-section auth-section centred sec-pad">
             <div class="auto-container">
-                <div class="content-box clearfix">
-                    <h1>Sign Up</h1>
-                    <ul class="bread-crumb clearfix">
-                        <li><a href="index.php">Home</a></li>
-                        <li>Sign Up</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!--End Page Title-->
+                <div class="row clearfix justify-content-center">
+                    <div class="col-xl-5 col-lg-6 col-md-8">
+                        <div class="auth-card">
+                            <div class="auth-header">
+                                <h2 class="auth-title">Create your account</h2>
+                                <p class="auth-subtitle">It’s quick and easy</p>
+                            </div>
 
-
-        <!-- ragister-section -->
-        <section class="ragister-section centred sec-pad">
-            <div class="auto-container">
-                <div class="row clearfix">
-                    <div class="col-xl-8 col-lg-12 col-md-12 offset-xl-2 big-column">
-
-                        <div class="tabs-box">
-
-
-                            <div class="inner-box">
-                                <h4>Sign up</h4>
-                                <form action="" method="post" class="default-form" onsubmit="return validateForm()">
-                                    <div class="form-group">
-                                        <label>Name</label>
-                                        <input type="text" name="name" id="name" required=""
-                                            placeholder="Enter Your Name" maxlength="120"
-                                            oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '');"
-                                            value="<?php echo $mcontactName;?>">
-                                        <span id="name-error" class="error">Invalid name</span>
+                            <form action="" method="post" class="default-form auth-form" onsubmit="return validateForm()">
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <div class="auth-input">
+                                        <span class="fi-icon fa fa-user"></span>
+                                        <input type="text" name="name" id="name" required
+                                               placeholder="Enter your name" maxlength="120"
+                                               oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '');"
+                                               value="<?php echo $mcontactName;?>">
                                     </div>
-                                    <div class="form-group">
-                                        <label>Mobile Number</label>
-                                        <input type="number"
-                                            oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 10);"
-                                            name="phone" id="mobile" required="" value="<?php echo $mcontactNumber;?>"
-                                            placeholder="Enyter Your Mobile Number">
-                                        <span id="mobile-error" class="error">Invalid mobile number format</span>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Password</label>
-                                        <input type="password" name="password" required=""
-                                            placeholder="Enyter Your Password">
-                                    </div>
-
-                                    <div class="form-group message-btn">
-                                        <button type="submit" name="submit" class="theme-btn btn-one">Sign up</button>
-                                    </div>
-                                </form>
-                                <div class="othre-text">
-                                    <p>Already have an account? <a href="login.php">Sign in</a></p>
+                                    <span id="name-error" class="error">Invalid name</span>
                                 </div>
+
+                                <div class="form-group">
+                                    <label>Mobile Number</label>
+                                    <div class="auth-input">
+                                        <span class="fi-icon fa fa-phone"></span>
+                                        <input type="number"
+                                               oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 10);"
+                                               name="phone" id="mobile" required value="<?php echo $mcontactNumber;?>"
+                                               placeholder="Enter your mobile number">
+                                    </div>
+                                    <span id="mobile-error" class="error">Invalid mobile number format</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <div class="auth-input">
+                                        <span class="fi-icon fa fa-lock"></span>
+                                        <input type="password" name="password" required placeholder="Enter your password">
+                                    </div>
+                                </div>
+
+                                <div class="form-group auth-submit message-btn">
+                                    <button type="submit" name="submit" class="theme-btn btn-one">Sign up</button>
+                                </div>
+                            </form>
+
+                            <div class="auth-footer">
+                                <p>Already have an account? <a href="login.php">Sign in</a></p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </section>
 
         <script>
-        document.getElementById('email').addEventListener('input', function() {
-            var emailInput = this;
-            var errorMessage = document.getElementById('error-message');
-            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-            if (!emailPattern.test(emailInput.value)) {
-                emailInput.classList.add('input-error');
-                errorMessage.style.display = 'inline';
-            } else {
-                emailInput.classList.remove('input-error');
-                errorMessage.style.display = 'none';
-            }
-        });
-
         document.getElementById('mobile').addEventListener('input', function() {
             var mobileInput = this;
             var mobileError = document.getElementById('mobile-error');
@@ -294,10 +261,6 @@ include('tagmanager.php');
 
             if (!namePattern.test(name)) {
                 alert('Please enter a valid name');
-                return false;
-            }
-            if (!emailPattern.test(email)) {
-                alert('Please enter a valid email');
                 return false;
             }
             if (!mobilePattern.test(mobile)) {

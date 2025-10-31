@@ -153,15 +153,15 @@ include('gtag.php');
         <?php include('header.php'); ?>
 
         <!-- banner-style-two -->
-        <section class="banner-style-two centred" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 120px 0 80px;">
+        <section class="banner-style-two centred">
             <div class="auto-container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-12">
-                        <div class="content-box text-left" style="padding-right: 30px;">
-                            <h2 style="font-size: 48px; font-weight: 700; line-height: 1.2; color: #222; margin-bottom: 20px;">
+                        <div class="content-box text-left">
+                            <h2>
                                 Easy way to find<br>a perfect property
                             </h2>
-                            <p style="font-size: 16px; color: #666; margin-bottom: 30px; line-height: 1.6;">
+                            <p>
                                 We provide a complete service for the sale, purchase or rental<br>
                                 real estate. We have been operating since 10 years. Sales<br>
                                 revenue of property has been increased to 85%.
@@ -170,7 +170,7 @@ include('gtag.php');
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <div class="image-box">
-                            <img src="assets/images/banner/banner-1.jpg" alt="Property" style="width: 100%; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                            <img src="assets/images/banner/banner-1.jpg" alt="Property">
                         </div>
                     </div>
                 </div>
@@ -271,66 +271,66 @@ include('gtag.php');
     <script src="assets/js/custom-home.js"></script>
 
         <!-- property-categories-section -->
-        <section class="property-categories-section" style="padding: 60px 0; background: #fff;">
+        <section class="property-categories-section">
             <div class="auto-container">
                 <div class="row clearfix justify-content-center">
                     <div class="col-lg-2 col-md-4 col-sm-6 category-block">
-                        <a href="buy-flats-apartments-properties-near-you.php" style="text-decoration: none;">
-                            <div class="category-item text-center" style="padding: 25px 15px; border-radius: 10px; transition: all 0.3s ease;">
-                                <div class="icon-box" style="width: 70px; height: 70px; margin: 0 auto 15px; background: #fff3f4; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <i class="icon-1" style="font-size: 32px; color: #ff5a5f;"></i>
+                        <a href="buy-flats-apartments-properties-near-you.php">
+                            <div class="category-item text-center">
+                                <div class="icon-box">
+                                    <i class="icon-1"></i>
                                 </div>
-                                <h6 style="font-size: 14px; font-weight: 600; color: #222; margin: 0;">Houses</h6>
+                                <h6>Houses</h6>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-6 category-block">
-                        <a href="buy-flats-apartments-properties-near-you.php" style="text-decoration: none;">
-                            <div class="category-item text-center" style="padding: 25px 15px; border-radius: 10px; transition: all 0.3s ease;">
-                                <div class="icon-box" style="width: 70px; height: 70px; margin: 0 auto 15px; background: #fff3f4; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <i class="icon-2" style="font-size: 32px; color: #ff5a5f;"></i>
+                        <a href="buy-flats-apartments-properties-near-you.php">
+                            <div class="category-item text-center">
+                                <div class="icon-box">
+                                    <i class="icon-2"></i>
                                 </div>
-                                <h6 style="font-size: 14px; font-weight: 600; color: #222; margin: 0;">Apartments</h6>
+                                <h6>Apartments</h6>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-6 category-block">
-                        <a href="buy-flats-apartments-properties-near-you.php" style="text-decoration: none;">
-                            <div class="category-item text-center" style="padding: 25px 15px; border-radius: 10px; transition: all 0.3s ease;">
-                                <div class="icon-box" style="width: 70px; height: 70px; margin: 0 auto 15px; background: #fff3f4; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <i class="icon-3" style="font-size: 32px; color: #ff5a5f;"></i>
+                        <a href="buy-flats-apartments-properties-near-you.php">
+                            <div class="category-item text-center">
+                                <div class="icon-box">
+                                    <i class="icon-3"></i>
                                 </div>
-                                <h6 style="font-size: 14px; font-weight: 600; color: #222; margin: 0;">Commercial</h6>
+                                <h6>Commercial</h6>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-6 category-block">
-                        <a href="rent-flats-apartments-properties-near-you.php" style="text-decoration: none;">
-                            <div class="category-item text-center" style="padding: 25px 15px; border-radius: 10px; transition: all 0.3s ease;">
-                                <div class="icon-box" style="width: 70px; height: 70px; margin: 0 auto 15px; background: #fff3f4; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <i class="icon-4" style="font-size: 32px; color: #ff5a5f;"></i>
+                        <a href="rent-flats-apartments-properties-near-you.php">
+                            <div class="category-item text-center">
+                                <div class="icon-box">
+                                    <i class="icon-4"></i>
                                 </div>
-                                <h6 style="font-size: 14px; font-weight: 600; color: #222; margin: 0;">Daily rental</h6>
+                                <h6>Daily rental</h6>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-6 category-block">
-                        <a href="buy-flats-apartments-properties-near-you.php" style="text-decoration: none;">
-                            <div class="category-item text-center" style="padding: 25px 15px; border-radius: 10px; transition: all 0.3s ease;">
-                                <div class="icon-box" style="width: 70px; height: 70px; margin: 0 auto 15px; background: #fff3f4; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <i class="icon-5" style="font-size: 32px; color: #ff5a5f;"></i>
+                        <a href="buy-flats-apartments-properties-near-you.php">
+                            <div class="category-item text-center">
+                                <div class="icon-box">
+                                    <i class="icon-5"></i>
                                 </div>
-                                <h6 style="font-size: 14px; font-weight: 600; color: #222; margin: 0;">New buildings</h6>
+                                <h6>New buildings</h6>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-6 category-block">
-                        <a href="buy-flats-apartments-properties-near-you.php" style="text-decoration: none;">
-                            <div class="category-item text-center" style="padding: 25px 15px; border-radius: 10px; transition: all 0.3s ease;">
-                                <div class="icon-box" style="width: 70px; height: 70px; margin: 0 auto 15px; background: #fff3f4; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                                    <i class="fas fa-ellipsis-h" style="font-size: 32px; color: #ff5a5f;"></i>
+                        <a href="buy-flats-apartments-properties-near-you.php">
+                            <div class="category-item text-center">
+                                <div class="icon-box">
+                                    <i class="fas fa-ellipsis-h"></i>
                                 </div>
-                                <h6 style="font-size: 14px; font-weight: 600; color: #222; margin: 0;">More</h6>
+                                <h6>More</h6>
                             </div>
                         </a>
                     </div>
@@ -340,58 +340,58 @@ include('gtag.php');
         <!-- property-categories-section end -->
 
         <!-- buy-sell-rent-section -->
-        <section class="buy-sell-rent-section" style="padding: 80px 0; background: #f8f9fa;">
+        <section class="buy-sell-rent-section">
             <div class="auto-container">
                 <div class="row clearfix">
                     <div class="col-lg-4 col-md-12 col-sm-12 action-block">
-                        <div class="action-box text-center" style="background: #fff; padding: 50px 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); height: 100%; transition: all 0.3s ease;">
-                            <div class="icon-wrapper" style="width: 120px; height: 120px; margin: 0 auto 25px; background: #f8f9fa; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative;">
-                                <div style="width: 100px; height: 100px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                                    <i class="icon-24" style="font-size: 42px; color: #ff5a5f;"></i>
+                        <div class="action-box text-center">
+                            <div class="icon-wrapper">
+                                <div>
+                                    <i class="icon-24"></i>
                                 </div>
-                                <span style="position: absolute; top: 10px; right: 10px; width: 30px; height: 30px; background: #ff5a5f; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                    <i class="fas fa-plus" style="font-size: 14px; color: #fff;"></i>
+                                <span>
+                                    <i class="fas fa-plus"></i>
                                 </span>
                             </div>
-                            <h4 style="font-size: 22px; font-weight: 700; color: #222; margin-bottom: 15px;">Buy a property</h4>
-                            <p style="font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 25px;">
+                            <h4>Buy a property</h4>
+                            <p>
                                 Let our experienced agent guide you through the buying process. Vast range of property options available.
                             </p>
-                            <a href="buy-flats-apartments-properties-near-you.php" style="display: inline-block; padding: 12px 35px; background: #fff; border: 2px solid #ff5a5f; color: #ff5a5f; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">Find a home</a>
+                            <a href="buy-flats-apartments-properties-near-you.php">Find a home</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 action-block">
-                        <div class="action-box text-center" style="background: #fff; padding: 50px 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); height: 100%; transition: all 0.3s ease;">
-                            <div class="icon-wrapper" style="width: 120px; height: 120px; margin: 0 auto 25px; background: #f8f9fa; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative;">
-                                <div style="width: 100px; height: 100px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                                    <i class="icon-25" style="font-size: 42px; color: #ff5a5f;"></i>
+                        <div class="action-box text-center">
+                            <div class="icon-wrapper">
+                                <div>
+                                    <i class="icon-25"></i>
                                 </div>
-                                <span style="position: absolute; top: 10px; right: 10px; width: 30px; height: 30px; background: #4CAF50; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                    <i class="fas fa-dollar-sign" style="font-size: 14px; color: #fff;"></i>
+                                <span>
+                                    <i class="fas fa-dollar-sign"></i>
                                 </span>
                             </div>
-                            <h4 style="font-size: 22px; font-weight: 700; color: #222; margin-bottom: 15px;">Sell a property</h4>
-                            <p style="font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 25px;">
+                            <h4>Sell a property</h4>
+                            <p>
                                 Sell with joy! Let our seasoned agents help you set the right price and negotiate a good deal.
                             </p>
-                            <a href="property-selling-assistance.php" style="display: inline-block; padding: 12px 35px; background: #fff; border: 2px solid #ff5a5f; color: #ff5a5f; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">Place an ad</a>
+                            <a href="property-selling-assistance.php">Place an ad</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 action-block">
-                        <div class="action-box text-center" style="background: #fff; padding: 50px 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); height: 100%; transition: all 0.3s ease;">
-                            <div class="icon-wrapper" style="width: 120px; height: 120px; margin: 0 auto 25px; background: #f8f9fa; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative;">
-                                <div style="width: 100px; height: 100px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
-                                    <i class="icon-26" style="font-size: 42px; color: #ff5a5f;"></i>
+                        <div class="action-box text-center">
+                            <div class="icon-wrapper">
+                                <div>
+                                    <i class="icon-26"></i>
                                 </div>
-                                <span style="position: absolute; top: 10px; right: 10px; width: 30px; height: 30px; background: #2196F3; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                    <i class="fas fa-search" style="font-size: 14px; color: #fff;"></i>
+                                <span>
+                                    <i class="fas fa-search"></i>
                                 </span>
                             </div>
-                            <h4 style="font-size: 22px; font-weight: 700; color: #222; margin-bottom: 15px;">Rent a property</h4>
-                            <p style="font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 25px;">
+                            <h4>Rent a property</h4>
+                            <p>
                                 You can rent your property and also explore endless rental options curated to match your lifestyle.
                             </p>
-                            <a href="rent-flats-apartments-properties-near-you.php" style="display: inline-block; padding: 12px 35px; background: #fff; border: 2px solid #ff5a5f; color: #ff5a5f; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">Find a rental</a>
+                            <a href="rent-flats-apartments-properties-near-you.php">Find a rental</a>
                         </div>
                     </div>
                 </div>
@@ -401,11 +401,11 @@ include('gtag.php');
 
 
         <!-- feature-style-two -->
-        <section class="feature-style-two sec-pad" style="background: #fff; padding: 80px 0;">
+        <section class="feature-style-two sec-pad">
             <div class="auto-container">
-                <div class="sec-title" style="margin-bottom: 50px;">
-                    <h5 style="color: #ff5a5f; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Top offers</h5>
-                    <h2 style="font-size: 36px; font-weight: 700; color: #222;">Hot Off the Market: Explore Fresh Listings!</h2>
+                <div class="sec-title">
+                    <h5>Top offers</h5>
+                    <h2>Hot Off the Market: Explore Fresh Listings!</h2>
                 </div>
                 <div class="three-item-carousel owl-carousel owl-theme owl-dots-none nav-style-one">
                     <?php
@@ -416,45 +416,45 @@ include('gtag.php');
                         ?>
 
                     <div class="feature-block-one">
-                        <a href="property-details.php?id=<?php echo $propertyId;?>" style="text-decoration: none;">
-                            <div class="inner-box" style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); background: #fff; transition: all 0.3s ease;">
-                                <div class="image-box" style="position: relative; overflow: hidden;">
-                                    <figure class="image" style="margin: 0; overflow: hidden; height: 260px;">
-                                        <img src="sitemanager/property/<?php echo $row1['pimage'];?>" alt="" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                        <a href="property-details.php?id=<?php echo $propertyId;?>">
+                            <div class="inner-box">
+                                <div class="image-box">
+                                    <figure class="image">
+                                        <img src="sitemanager/property/<?php echo $row1['pimage'];?>" alt="">
                                     </figure>
-                                    <div class="batch" style="position: absolute; top: 15px; left: 15px; background: #ff5a5f; color: #fff; padding: 6px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">
+                                    <div class="batch">
                                         <i class="icon-11"></i> Hot offer
                                     </div>
-                                    <div class="price-tag" style="position: absolute; bottom: 15px; left: 15px; background: rgba(255,255,255,0.95); padding: 8px 18px; border-radius: 25px; font-weight: 700; color: #222;">
+                                    <div class="price-tag">
                                         Rs. <?php echo $row1['price'];?>
                                     </div>
                                 </div>
-                                <div class="lower-content" style="padding: 25px;">
-                                    <div class="author-info clearfix" style="margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between;">
-                                        <div class="author" style="display: flex; align-items: center;">
-                                            <figure class="author-thumb" style="width: 35px; height: 35px; border-radius: 50%; overflow: hidden; margin: 0 10px 0 0;">
-                                                <img src="sitemanager/agent/<?php echo $row1['agentpic'];?>" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                                <div class="lower-content">
+                                    <div class="author-info clearfix">
+                                        <div class="author">
+                                            <figure class="author-thumb">
+                                                <img src="sitemanager/agent/<?php echo $row1['agentpic'];?>" alt="">
                                             </figure>
-                                            <h6 style="margin: 0; font-size: 13px; color: #666; font-weight: 500;"><?php echo $row1['agentname'];?></h6>
+                                            <h6><?php echo $row1['agentname'];?></h6>
                                         </div>
                                         <div class="buy-btn">
-                                            <span style="background: #e8f5e9; color: #4CAF50; padding: 5px 12px; border-radius: 15px; font-size: 11px; font-weight: 600;">For <?php echo $row1['stype'];?></span>
+                                            <span>For <?php echo $row1['stype'];?></span>
                                         </div>
                                     </div>
-                                    <div class="title-text" style="margin-bottom: 15px;">
-                                        <h4 style="font-size: 18px; font-weight: 700; color: #222; margin: 0; line-height: 1.4;">
+                                    <div class="title-text">
+                                        <h4>
                                             <?php echo $row1['title'];?>
                                         </h4>
                                     </div>
-                                    <ul class="more-details clearfix" style="list-style: none; padding: 0; margin: 0; display: flex; gap: 15px;">
-                                        <li style="font-size: 13px; color: #666; display: flex; align-items: center;">
-                                            <i class="icon-14" style="margin-right: 5px; color: #ff5a5f;"></i><?php echo $row1['bedroom'];?> Beds
+                                    <ul class="more-details clearfix">
+                                        <li>
+                                            <i class="icon-14"></i><?php echo $row1['bedroom'];?> Beds
                                         </li>
-                                        <li style="font-size: 13px; color: #666; display: flex; align-items: center;">
-                                            <i class="icon-15" style="margin-right: 5px; color: #ff5a5f;"></i><?php echo $row1['bathroom'];?> Baths
+                                        <li>
+                                            <i class="icon-15"></i><?php echo $row1['bathroom'];?> Baths
                                         </li>
-                                        <li style="font-size: 13px; color: #666; display: flex; align-items: center;">
-                                            <i class="icon-16" style="margin-right: 5px; color: #ff5a5f;"></i><?php echo $row1['superbuiltuparea'];?> Sq Ft
+                                        <li>
+                                            <i class="icon-16"></i><?php echo $row1['superbuiltuparea'];?> Sq Ft
                                         </li>
                                     </ul>
                                 </div>
@@ -473,10 +473,10 @@ include('gtag.php');
         <section class="cta-section alternate-2 centred"
             style="background-image: url(assets/images/background/cta-1.jpg);">
             <div class="auto-container">
-                <div class="inner-box clearfix">
+                                <div class="inner-box clearfix">
                     <div class="text">
-                        <h2>Refer, Earn, Repeat – It’s That Simple! </h2>
-                        <p style="color: #fff;">Turn Referrals into Rewards – Earn Cash Today!</p>
+                        <h2>Refer, Earn, Repeat – It's That Simple! </h2>
+                        <p>Turn Referrals into Rewards – Earn Cash Today!</p>
                     </div>
                     <div class="btn-box">
                         <a href="signup.php" class="theme-btn btn-three">Signup Now</a>
@@ -686,11 +686,11 @@ include('gtag.php');
 
 
         <!-- deals-style-two -->
-        <section class="deals-style-two sec-pad" style="background: #f8f9fa; padding: 80px 0;">
+        <section class="deals-style-two sec-pad">
             <div class="auto-container">
-                <div class="sec-title centred" style="margin-bottom: 50px;">
-                    <h5 style="color: #ff5a5f; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Added today</h5>
-                    <h2 style="font-size: 36px; font-weight: 700; color: #222;">Our Best Deals</h2>
+                <div class="sec-title centred">
+                    <h5>Added today</h5>
+                    <h2>Our Best Deals</h2>
                 </div>
                 <div class="deals-carousel owl-carousel owl-theme dots-style-one owl-nav-none">
                     <?php
@@ -700,59 +700,59 @@ include('gtag.php');
                         $propertyId14 = !empty($row14['slug']) ? $row14['slug'] : $row14['pid'];
                     ?>
                     <div class="single-item">
-                        <a href="property-details.php?id=<?php echo $propertyId14;?>" style="text-decoration: none;">
-                            <div class="deals-card" style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: all 0.3s ease;">
-                                <div class="row clearfix" style="margin: 0;">
-                                    <div class="col-lg-6 col-md-6 col-sm-12 deals-block" style="padding: 0;">
-                                        <div class="image-box" style="position: relative; height: 100%; min-height: 350px;">
-                                            <figure class="image" style="margin: 0; height: 100%;">
-                                                <img src="sitemanager/property/<?php echo $row14['pimage'];?>" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                        <a href="property-details.php?id=<?php echo $propertyId14;?>">
+                            <div class="deals-card">
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 deals-block">
+                                        <div class="image-box">
+                                            <figure class="image">
+                                                <img src="sitemanager/property/<?php echo $row14['pimage'];?>" alt="">
                                             </figure>
-                                            <div class="buy-btn" style="position: absolute; top: 20px; left: 20px;">
-                                                <span style="background: rgba(255,255,255,0.95); color: #4CAF50; padding: 8px 20px; border-radius: 20px; font-size: 13px; font-weight: 600;">For <?php echo $row14['stype'];?></span>
+                                            <div class="buy-btn">
+                                                <span>For <?php echo $row14['stype'];?></span>
                                             </div>
                                             <?php if($row14['stype'] == 'Sell'): ?>
-                                            <div style="position: absolute; top: 20px; right: 20px; background: #ff5a5f; color: #fff; padding: 6px 15px; border-radius: 20px; font-size: 11px; font-weight: 600;">
+                                            <div>
                                                 Featured
                                             </div>
                                             <?php endif; ?>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 deals-block" style="padding: 0;">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 deals-block">
                                         <div class="deals-block-one">
-                                            <div class="inner-box" style="padding: 40px;">
+                                            <div class="inner-box">
                                                 <div class="lower-content">
-                                                    <div class="title-text" style="margin-bottom: 20px;">
-                                                        <h4 style="font-size: 22px; font-weight: 700; color: #222; line-height: 1.4; margin: 0;">
+                                                    <div class="title-text">
+                                                        <h4>
                                                             <?php echo $row14['title'];?>
                                                         </h4>
                                                     </div>
-                                                    <div class="price-box clearfix" style="margin-bottom: 20px;">
+                                                    <div class="price-box clearfix">
                                                         <div class="price-info pull-left">
-                                                            <h6 style="font-size: 13px; color: #999; margin-bottom: 5px;">Start From</h6>
-                                                            <h4 style="font-size: 28px; font-weight: 700; color: #ff5a5f; margin: 0;">Rs. <?php echo $row14['price'];?></h4>
+                                                            <h6>Start From</h6>
+                                                            <h4>Rs. <?php echo $row14['price'];?></h4>
                                                         </div>
                                                         <div class="author-box pull-right">
-                                                            <figure class="author-thumb" style="text-align: center;">
-                                                                <img src="sitemanager/agent/<?php echo $row14['agentpic'];?>" alt="" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; margin-bottom: 5px;">
-                                                                <span style="display: block; font-size: 12px; color: #666;"><?php echo $row14['agentname'];?></span>
+                                                            <figure class="author-thumb">
+                                                                <img src="sitemanager/agent/<?php echo $row14['agentpic'];?>" alt="">
+                                                                <span><?php echo $row14['agentname'];?></span>
                                                             </figure>
                                                         </div>
                                                     </div>
-                                                    <ul class="more-details clearfix" style="list-style: none; padding: 0; margin: 0 0 25px 0; display: flex; gap: 20px; flex-wrap: wrap;">
-                                                        <li style="font-size: 14px; color: #666; display: flex; align-items: center;">
-                                                            <i class="icon-14" style="margin-right: 8px; color: #ff5a5f;"></i><?php echo $row14['bedroom'];?> Beds
+                                                    <ul class="more-details clearfix">
+                                                        <li>
+                                                            <i class="icon-14"></i><?php echo $row14['bedroom'];?> Beds
                                                         </li>
-                                                        <li style="font-size: 14px; color: #666; display: flex; align-items: center;">
-                                                            <i class="icon-15" style="margin-right: 8px; color: #ff5a5f;"></i><?php echo $row14['bathroom'];?> Baths
+                                                        <li>
+                                                            <i class="icon-15"></i><?php echo $row14['bathroom'];?> Baths
                                                         </li>
-                                                        <li style="font-size: 14px; color: #666; display: flex; align-items: center;">
-                                                            <i class="icon-16" style="margin-right: 8px; color: #ff5a5f;"></i><?php echo $row14['superbuiltuparea'];?> Sq Ft
+                                                        <li>
+                                                            <i class="icon-16"></i><?php echo $row14['superbuiltuparea'];?> Sq Ft
                                                         </li>
                                                     </ul>
                                                     <div class="other-info-box clearfix">
                                                         <div class="btn-box">
-                                                            <button style="background: #ff5a5f; border: none; color: #fff; padding: 12px 35px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">
+                                                            <button>
                                                                 See Details
                                                             </button>
                                                         </div>
@@ -777,42 +777,42 @@ include('gtag.php');
 
 
         <!-- testimonial-style-four -->
-        <section class="testimonial-style-four centred" style="background: #fff; padding: 80px 0;">
+        <section class="testimonial-style-four centred">
             <div class="auto-container">
                 <div class="inner-container">
-                    <div class="sec-title" style="margin-bottom: 50px;">
-                        <h5 style="color: #ff5a5f; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Top real estate agents</h5>
-                        <h2 style="font-size: 36px; font-weight: 700; color: #222;">What They Say About Us</h2>
-                        <p style="color: #666; font-size: 16px; margin-top: 15px;"> </p>
+                    <div class="sec-title">
+                        <h5>Top real estate agents</h5>
+                        <h2>What They Say About Us</h2>
+                        <p> </p>
                     </div>
                     <div class="row clearfix">
                         <div class="col-lg-6 col-md-12 col-sm-12">
-                            <div class="agent-profile" style="background: #f8f9fa; border-radius: 15px; padding: 60px 40px; text-align: left; height: 100%;">
+                            <div class="agent-profile">
                                 <div class="row align-items-center">
                                     <div class="col-md-5">
-                                        <div class="agent-image" style="text-align: center;">
-                                            <img src="assets/images/resource/testimonial-1.jpg" alt="Agent" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 5px solid #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                                        <div class="agent-image">
+                                            <img src="assets/images/resource/testimonial-1.jpg" alt="Agent">
                                         </div>
                                     </div>
                                     <div class="col-md-7">
-                                        <div class="agent-info" style="padding-left: 20px;">
-                                            <h4 style="font-size: 24px; font-weight: 700; color: #222; margin-bottom: 15px;">Royal Miles</h4>
-                                            <p style="font-size: 14px; color: #666; line-height: 1.8;">Real Estate Broker</p>
-                                            <div class="rating" style="margin: 15px 0;">
-                                                <i class="fas fa-star" style="color: #ffc107; font-size: 14px;"></i>
-                                                <i class="fas fa-star" style="color: #ffc107; font-size: 14px;"></i>
-                                                <i class="fas fa-star" style="color: #ffc107; font-size: 14px;"></i>
-                                                <i class="fas fa-star" style="color: #ffc107; font-size: 14px;"></i>
-                                                <i class="fas fa-star" style="color: #ffc107; font-size: 14px;"></i>
+                                        <div class="agent-info">
+                                            <h4>Royal Miles</h4>
+                                            <p>Real Estate Broker</p>
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
                                             </div>
-                                            <div class="social-links" style="margin-top: 20px;">
-                                                <a href="#" style="display: inline-block; width: 35px; height: 35px; background: #fff; border-radius: 50%; text-align: center; line-height: 35px; margin-right: 8px; color: #666; transition: all 0.3s ease;">
+                                            <div class="social-links">
+                                                <a href="#">
                                                     <i class="fab fa-facebook-f"></i>
                                                 </a>
-                                                <a href="#" style="display: inline-block; width: 35px; height: 35px; background: #fff; border-radius: 50%; text-align: center; line-height: 35px; margin-right: 8px; color: #666; transition: all 0.3s ease;">
+                                                <a href="#">
                                                     <i class="fab fa-twitter"></i>
                                                 </a>
-                                                <a href="#" style="display: inline-block; width: 35px; height: 35px; background: #fff; border-radius: 50%; text-align: center; line-height: 35px; margin-right: 8px; color: #666; transition: all 0.3s ease;">
+                                                <a href="#">
                                                     <i class="fab fa-linkedin-in"></i>
                                                 </a>
                                             </div>
@@ -822,75 +822,75 @@ include('gtag.php');
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-12 col-sm-12">
-                            <div class="testimonial-content" style="background: #fff; border-radius: 15px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); text-align: left; height: 100%; position: relative;">
-                                <div class="quote-icon" style="position: absolute; top: 30px; right: 30px;">
-                                    <i class="fas fa-quote-right" style="font-size: 60px; color: #ff5a5f; opacity: 0.1;"></i>
+                            <div class="testimonial-content">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-right"></i>
                                 </div>
-                                <h4 style="font-size: 20px; font-weight: 700; color: #222; margin-bottom: 20px; position: relative; z-index: 1;">"I will select the best accommodation for you"</h4>
-                                <p style="font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 25px;">
+                                <h4>"I will select the best accommodation for you"</h4>
+                                <p>
                                     A sed lorem felis, pulvinar pharetra. At tempus, vel sed faucibus amet sit elementum sed erat. Id nunc blandit pharetra facilisis. Pulvinar lobortis, facilisis quis. Conse aliquam lectus risus et at vitae feugiat. Vulputate nulla iaculis amet non vulputate.
                                 </p>
-                                <div class="author-details" style="display: flex; align-items: center; padding-top: 20px; border-top: 1px solid #e5e5e5;">
-                                    <h5 style="margin: 0; font-size: 16px; font-weight: 600; color: #222;">Royal Miles</h5>
-                                    <span style="margin-left: auto; font-size: 13px; color: #999;">Real Estate Broker</span>
+                                <div class="author-details">
+                                    <h5>Royal Miles</h5>
+                                    <span>Real Estate Broker</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-carousel" style="margin-top: 50px;">
+                    <div class="testimonial-carousel">
                         <div class="three-item-carousel owl-carousel owl-theme owl-nav-none dots-style-one">
                             <div class="testimonial-block-three">
-                                <div class="inner-box" style="background: #f8f9fa; padding: 35px 30px; border-radius: 15px; transition: all 0.3s ease;">
-                                    <div class="icon-box" style="margin-bottom: 20px;"><i class="icon-18" style="font-size: 32px; color: #ff5a5f;"></i></div>
-                                    <h4 style="font-size: 18px; font-weight: 700; color: #222; margin-bottom: 15px;">"A Trustworthy Experience!"</h4>
-                                    <p style="font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 20px;">propel took the stress out of my property search. Their transparency and genuine
+                                <div class="inner-box">
+                                    <div class="icon-box"><i class="icon-18"></i></div>
+                                    <h4>"A Trustworthy Experience!"</h4>
+                                    <p>propel took the stress out of my property search. Their transparency and genuine
                                         support made me feel valued as a customer. I found the perfect rental property.</p>
-                                    <h5 style="font-size: 15px; font-weight: 600; color: #222; margin: 0;">Rajesh Malhotra</h5>
+                                    <h5>Rajesh Malhotra</h5>
                                 </div>
                             </div>
                             <div class="testimonial-block-three">
-                                <div class="inner-box" style="background: #f8f9fa; padding: 35px 30px; border-radius: 15px; transition: all 0.3s ease;">
-                                    <div class="icon-box" style="margin-bottom: 20px;"><i class="icon-18" style="font-size: 32px; color: #ff5a5f;"></i></div>
-                                    <h4 style="font-size: 18px; font-weight: 700; color: #222; margin-bottom: 15px;">"Smooth and Hassle-Free Process"</h4>
-                                    <p style="font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 20px;">The platform is easy to use, and the local agents were very knowledgeable, helping me
+                                <div class="inner-box">
+                                    <div class="icon-box"><i class="icon-18"></i></div>
+                                    <h4>"Smooth and Hassle-Free Process"</h4>
+                                    <p>The platform is easy to use, and the local agents were very knowledgeable, helping me
                                         find a home that fits my budget and lifestyle perfectly.</p>
-                                    <h5 style="font-size: 15px; font-weight: 600; color: #222; margin: 0;">Pooja Singh</h5>
+                                    <h5>Pooja Singh</h5>
                                 </div>
                             </div>
                             <div class="testimonial-block-three">
-                                <div class="inner-box" style="background: #f8f9fa; padding: 35px 30px; border-radius: 15px; transition: all 0.3s ease;">
-                                    <div class="icon-box" style="margin-bottom: 20px;"><i class="icon-18" style="font-size: 32px; color: #ff5a5f;"></i></div>
-                                    <h4 style="font-size: 18px; font-weight: 700; color: #222; margin-bottom: 15px;">"Exceeded My Expectations!"</h4>
-                                    <p style="font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 20px;">propel has set a new standard for real estate portals. From clear listings to
+                                <div class="inner-box">
+                                    <div class="icon-box"><i class="icon-18"></i></div>
+                                    <h4>"Exceeded My Expectations!"</h4>
+                                    <p>propel has set a new standard for real estate portals. From clear listings to
                                         personalized support, I felt guided throughout the entire process.</p>
-                                    <h5 style="font-size: 15px; font-weight: 600; color: #222; margin: 0;">Ankit Mohanty</h5>
+                                    <h5>Ankit Mohanty</h5>
                                 </div>
                             </div>
                             <div class="testimonial-block-three">
-                                <div class="inner-box" style="background: #f8f9fa; padding: 35px 30px; border-radius: 15px; transition: all 0.3s ease;">
-                                    <div class="icon-box" style="margin-bottom: 20px;"><i class="icon-18" style="font-size: 32px; color: #ff5a5f;"></i></div>
-                                    <h4 style="font-size: 18px; font-weight: 700; color: #222; margin-bottom: 15px;">"A Trustworthy Experience!"</h4>
-                                    <p style="font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 20px;">propel took the stress out of my property search. Their transparency and genuine
+                                <div class="inner-box">
+                                    <div class="icon-box"><i class="icon-18"></i></div>
+                                    <h4>"A Trustworthy Experience!"</h4>
+                                    <p>propel took the stress out of my property search. Their transparency and genuine
                                         support made me feel valued as a customer. I found the perfect rental property.</p>
-                                    <h5 style="font-size: 15px; font-weight: 600; color: #222; margin: 0;">Rajesh Malhotra</h5>
+                                    <h5>Rajesh Malhotra</h5>
                                 </div>
                             </div>
                             <div class="testimonial-block-three">
-                                <div class="inner-box" style="background: #f8f9fa; padding: 35px 30px; border-radius: 15px; transition: all 0.3s ease;">
-                                    <div class="icon-box" style="margin-bottom: 20px;"><i class="icon-18" style="font-size: 32px; color: #ff5a5f;"></i></div>
-                                    <h4 style="font-size: 18px; font-weight: 700; color: #222; margin-bottom: 15px;">"Smooth and Hassle-Free Process"</h4>
-                                    <p style="font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 20px;">The platform is easy to use, and the local agents were very knowledgeable, helping me
+                                <div class="inner-box">
+                                    <div class="icon-box"><i class="icon-18"></i></div>
+                                    <h4>"Smooth and Hassle-Free Process"</h4>
+                                    <p>The platform is easy to use, and the local agents were very knowledgeable, helping me
                                         find a home that fits my budget and lifestyle perfectly.</p>
-                                    <h5 style="font-size: 15px; font-weight: 600; color: #222; margin: 0;">Pooja Singh</h5>
+                                    <h5>Pooja Singh</h5>
                                 </div>
                             </div>
                             <div class="testimonial-block-three">
-                                <div class="inner-box" style="background: #f8f9fa; padding: 35px 30px; border-radius: 15px; transition: all 0.3s ease;">
-                                    <div class="icon-box" style="margin-bottom: 20px;"><i class="icon-18" style="font-size: 32px; color: #ff5a5f;"></i></div>
-                                    <h4 style="font-size: 18px; font-weight: 700; color: #222; margin-bottom: 15px;">"Exceeded My Expectations!"</h4>
-                                    <p style="font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 20px;">propel has set a new standard for real estate portals. From clear listings to
+                                <div class="inner-box">
+                                    <div class="icon-box"><i class="icon-18"></i></div>
+                                    <h4>"Exceeded My Expectations!"</h4>
+                                    <p>propel has set a new standard for real estate portals. From clear listings to
                                         personalized support, I felt guided throughout the entire process.</p>
-                                    <h5 style="font-size: 15px; font-weight: 600; color: #222; margin: 0;">Ankit Mohanty</h5>
+                                    <h5>Ankit Mohanty</h5>
                                 </div>
                             </div>
                         </div>

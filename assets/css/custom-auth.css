@@ -1,0 +1,148 @@
+/* Custom styles for authentication pages (login/signup) */
+
+.auth-section {
+  background: #f6f7fb;
+  position: relative;
+}
+
+.auth-section .auto-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media (min-width: 992px) {
+  .auth-section .auto-container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.auth-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+  border: 1px solid #eef0f2;
+  padding: 32px;
+}
+
+@media (min-width: 576px) {
+  .auth-card { padding: 40px; }
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.auth-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #151515;
+  margin: 0 0 6px 0;
+}
+
+.auth-subtitle {
+  font-size: 14px;
+  color: #6b7280; /* slate-500 */
+  margin: 0;
+}
+
+.auth-form .form-group {
+  margin-bottom: 18px;
+}
+
+.auth-form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.auth-input {
+  position: relative;
+}
+
+.auth-input .fi-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fbb84d;
+}
+
+.auth-input input[type="text"],
+.auth-input input[type="tel"],
+.auth-input input[type="number"],
+.auth-input input[type="password"],
+.auth-input input[type="email"] {
+  width: 100%;
+  height: 48px;
+  padding: 10px 14px 10px 40px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+
+.auth-input input:focus {
+  outline: none;
+  border-color: #fbb84d;
+  box-shadow: 0 0 0 3px rgba(188,136,63,0.15);
+}
+
+.auth-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.auth-actions a {
+  font-size: 13px;
+  color: #fbb84d;
+  text-decoration: none;
+}
+
+.auth-actions a:hover { text-decoration: underline; }
+
+.auth-submit {
+  margin-top: 10px;
+}
+
+.auth-submit .theme-btn.btn-one {
+  width: 100%;
+  /* height: 48px; */
+  border-radius: 12px;
+  font-weight: 700;
+  border: none;
+}
+.auth-submit .theme-btn.btn-one:hover {
+  color: #ffffff;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.auth-footer p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.auth-footer a { color: #fbb84d; font-weight: 600; text-decoration: none; }
+.auth-footer a:hover { text-decoration: underline; }
+
+/* Inline error helpers used by signup/login JS */
+.error {
+  color: #e53935;
+  display: none;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.input-error {
+  border-color: #e53935 !important;
+}

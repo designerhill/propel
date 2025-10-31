@@ -60,6 +60,7 @@ include('config.php');
     <link href="assets/css/switcher-style.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
+    <link href="assets/css/custom-auth.css" rel="stylesheet">
     <?php
 include('gtag.php');
 ?>
@@ -79,47 +80,48 @@ include('tagmanager.php');
 
         <?php $header_style = 'inner'; include('header.php'); ?>
 
-        <!-- ragister-section -->
-        <section class="ragister-section centred sec-pad">
+        <!-- auth-section -->
+        <section class="ragister-section auth-section centred sec-pad">
             <div class="auto-container">
-                <div class="row clearfix">
-                    <div class="col-xl-8 col-lg-12 col-md-12 offset-xl-2 big-column">
-                        <div class="sec-title">
-
-                            <h2>Sign In</h2>
-                        </div>
-                        <div class="tabs-box">
-
-                            <div class="inner-box">
-                                <h4>Sign in</h4>
-                                <form action="" method="post" class="default-form">
-
-                                    <div class="form-group">
-                                        <label>Mobile Number</label>
-                                        <input type="number"
-                                            oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 10);"
-                                            name="phone" required="" placeholder="Enter your mobile number">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Password</label>
-                                        <input type="password" name="password" required=""
-                                            placeholder="Enter your password">
-                                    </div>
-                                    <div class="form-group message-btn">
-                                        <button type="submit" class="theme-btn btn-one" name="login">Sign in</button>
-                                    </div>
-                                </form>
-                                <div class="othre-text">
-                                    <p>Do not have any account? <a href="signup.php">Register Now</a></p>
-                                </div>
+                <div class="row clearfix justify-content-center">
+                    <div class="col-xl-5 col-lg-6 col-md-8">
+                        <div class="auth-card">
+                            <div class="auth-header">
+                                <h2 class="auth-title">Welcome back</h2>
+                                <p class="auth-subtitle">Sign in to continue</p>
                             </div>
 
+                            <form action="" method="post" class="default-form auth-form">
+                                <div class="form-group">
+                                    <label>Mobile Number</label>
+                                    <div class="auth-input">
+                                        <span class="fi-icon fa fa-phone"></span>
+                                        <input type="number"
+                                               oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 10);"
+                                               name="phone" required placeholder="Enter your mobile number">
+                                    </div>
+                                </div>
 
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <div class="auth-input">
+                                        <span class="fi-icon fa fa-lock"></span>
+                                        <input type="password" name="password" required placeholder="Enter your password">
+                                    </div>
+                                </div>
+
+                                <div class="form-group auth-submit message-btn">
+                                    <button type="submit" class="theme-btn btn-one" name="login">Sign in</button>
+                                </div>
+                            </form>
+
+                            <div class="auth-footer">
+                                <p>Don’t have an account? <a href="signup.php">Register Now</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </section>
 
         <?php
